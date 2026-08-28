@@ -21,7 +21,7 @@ env/
 .DS_Store
 
 results/all_results.json
-results/latest_matches.json
 results/REPORT.md
 results/weekly_summary.md
 !results/.gitkeep
+!results/latest_matches.json
