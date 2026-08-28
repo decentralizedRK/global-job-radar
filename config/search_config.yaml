@@ -1,0 +1,494 @@
+search_profiles:
+  primary:
+    title_keywords:
+      - "Tech Program Manager"
+      - "Technical Program Manager"
+      - "Program Manager"
+      - "Engineering Program Manager"
+      - "IT Program Manager"
+      - "Delivery Manager"
+      - "Project Director"
+      - "Program Director"
+      - "Technical Project Manager"
+      - "Global Delivery Manager"
+      - "Engagement Manager"
+      - "Client Partner"
+      - "Expat Manager"
+
+    location_keywords:
+      - "India"
+      - "Bangalore"
+      - "Bengaluru"
+      - "Mumbai"
+      - "Hyderabad"
+      - "Pune"
+      - "Gurugram"
+      - "Gurgaon"
+      - "Chennai"
+      - "Noida"
+      - "Delhi NCR"
+
+    company_origin:
+      - "Japan"
+      - "Japanese"
+      - "US"
+      - "European"
+      - "German"
+      - "Korean"
+      - "Global"
+
+    experience_level:
+      - "Senior"
+      - "Director"
+      - "Lead"
+      - "Principal"
+      - "VP"
+
+    compensation:
+      min_annual_inr: 10000000  # 1 crore INR
+      currency: "INR"
+
+# Priority tiers: tier1 = Japanese (highest priority), tier2 = US/Global Tech,
+# tier3 = European, tier4 = Korean/Other Asian
+target_companies:
+  tier1_japanese_priority:
+    - name: "Rakuten"
+      careers_url: "https://global.rakuten.com/corp/careers/"
+      origin: "Japan"
+      notes: "Strong engineering culture, English-friendly, India GDC"
+
+    - name: "Sony"
+      careers_url: "https://www.sony.com/en/careers"
+      origin: "Japan"
+      notes: "Multiple India offices, R&D focus"
+
+    - name: "NTT Data"
+      careers_url: "https://www.nttdata.com/global/en/careers"
+      origin: "Japan"
+      notes: "Large India presence, consulting and delivery"
+
+    - name: "Fujitsu"
+      careers_url: "https://www.fujitsu.com/global/about/careers/"
+      origin: "Japan"
+      notes: "Global delivery, digital transformation"
+
+    - name: "Hitachi"
+      careers_url: "https://www.hitachi.com/careers/"
+      origin: "Japan"
+      notes: "Hitachi Vantara, Hitachi Digital in India"
+
+    - name: "Toyota"
+      careers_url: "https://global.toyota/en/careers/"
+      origin: "Japan"
+      notes: "Toyota Connected, digital initiatives"
+
+    - name: "Honda"
+      careers_url: "https://global.honda/en/careers/"
+      origin: "Japan"
+      notes: "R&D and manufacturing tech in India"
+
+    - name: "Panasonic"
+      careers_url: "https://careers.na.panasonic.com/"
+      origin: "Japan"
+      notes: "India innovation center"
+
+    - name: "Nomura"
+      careers_url: "https://www.nomura.com/careers/"
+      origin: "Japan"
+      notes: "Financial services, large India tech hub, competitive pay"
+
+    - name: "SoftBank"
+      careers_url: "https://group.softbank/en/careers"
+      origin: "Japan"
+      notes: "Investment arm, tech operations"
+
+    - name: "LINE (LY Corporation)"
+      careers_url: "https://careers.lycorp.co.jp/en/"
+      origin: "Japan"
+      notes: "Messaging platform, engineering-first culture"
+
+    - name: "Mitsubishi Electric"
+      careers_url: "https://www.mitsubishielectric.com/en/career/"
+      origin: "Japan"
+      notes: "Industrial automation, India operations"
+
+    - name: "NEC Corporation"
+      careers_url: "https://www.nec.com/en/global/careers/"
+      origin: "Japan"
+      notes: "IT services, public safety, India GDC"
+
+    - name: "MUFG"
+      careers_url: "https://www.mufg.jp/english/careers/"
+      origin: "Japan"
+      notes: "Banking, large India tech center"
+
+    - name: "Daikin"
+      careers_url: "https://www.daikin.com/careers/"
+      origin: "Japan"
+      notes: "Manufacturing + tech, India is key market"
+
+    - name: "Fast Retailing (UNIQLO)"
+      careers_url: "https://www.fastretailing.com/careers/"
+      origin: "Japan"
+      notes: "Retail tech, global expansion"
+
+    - name: "Recruit Holdings"
+      careers_url: "https://recruit-holdings.com/en/careers/"
+      origin: "Japan"
+      notes: "HR tech (Indeed parent), data-driven culture"
+
+    - name: "Mercari"
+      careers_url: "https://careers.mercari.com/"
+      origin: "Japan"
+      notes: "Tech startup, strong engineering culture"
+
+    - name: "SmartNews"
+      careers_url: "https://www.smartnews.com/careers/"
+      origin: "Japan"
+      notes: "AI/ML focus, global expansion"
+
+    - name: "KDDI"
+      careers_url: "https://www.kddi.com/english/careers/"
+      origin: "Japan"
+      notes: "Telecom, cloud services"
+
+    - name: "Murata Manufacturing"
+      origin: "Japan"
+    - name: "Keyence"
+      origin: "Japan"
+    - name: "Denso"
+      origin: "Japan"
+    - name: "Bridgestone"
+      origin: "Japan"
+    - name: "Toshiba"
+      origin: "Japan"
+    - name: "Olympus"
+      origin: "Japan"
+    - name: "Komatsu"
+      origin: "Japan"
+    - name: "Sumitomo"
+      origin: "Japan"
+    - name: "Mitsui"
+      origin: "Japan"
+    - name: "Maruti Suzuki"
+      origin: "Japan"
+    - name: "Yamaha"
+      origin: "Japan"
+
+  tier2_us_global_tech:
+    - name: "Google"
+      careers_url: "https://careers.google.com/"
+      origin: "US"
+      notes: "Massive India presence, top pay, strong TPM culture"
+
+    - name: "Microsoft"
+      careers_url: "https://careers.microsoft.com/"
+      origin: "US"
+      notes: "Huge India GDC, well-established TPM role"
+
+    - name: "Amazon"
+      careers_url: "https://www.amazon.jobs/"
+      origin: "US"
+      notes: "Large India tech org, TPM is core role"
+
+    - name: "Meta"
+      careers_url: "https://www.metacareers.com/"
+      origin: "US"
+      notes: "India engineering office, competitive comp"
+
+    - name: "Apple"
+      careers_url: "https://jobs.apple.com/"
+      origin: "US"
+      notes: "Growing India presence, premium culture"
+
+    - name: "Netflix"
+      careers_url: "https://jobs.netflix.com/"
+      origin: "US"
+      notes: "India operations, top-of-market pay"
+
+    - name: "Salesforce"
+      careers_url: "https://careers.salesforce.com/"
+      origin: "US"
+      notes: "Large India office, great culture ratings"
+
+    - name: "Adobe"
+      careers_url: "https://careers.adobe.com/"
+      origin: "US"
+      notes: "Major India R&D center, strong employer brand"
+
+    - name: "Uber"
+      careers_url: "https://www.uber.com/careers/"
+      origin: "US"
+      notes: "India engineering hub, competitive pay"
+
+    - name: "Stripe"
+      careers_url: "https://stripe.com/jobs"
+      origin: "US"
+      notes: "India engineering, top pay"
+
+    - name: "Goldman Sachs"
+      careers_url: "https://www.goldmansachs.com/careers/"
+      origin: "US"
+      notes: "Massive Bangalore tech center, premium comp"
+
+    - name: "JP Morgan Chase"
+      careers_url: "https://careers.jpmorgan.com/"
+      origin: "US"
+      notes: "Large India tech hub, competitive pay"
+
+    - name: "Morgan Stanley"
+      careers_url: "https://www.morganstanley.com/careers"
+      origin: "US"
+      notes: "India technology center, strong comp"
+
+    - name: "Visa"
+      careers_url: "https://corporate.visa.com/en/careers/"
+      origin: "US"
+      notes: "Bangalore tech hub"
+
+    - name: "Mastercard"
+      careers_url: "https://careers.mastercard.com/"
+      origin: "US"
+      notes: "India tech center, good work culture"
+
+    - name: "PayPal"
+      careers_url: "https://careers.pypl.com/"
+      origin: "US"
+      notes: "Chennai/Bangalore offices"
+
+    - name: "ServiceNow"
+      careers_url: "https://careers.servicenow.com/"
+      origin: "US"
+      notes: "Hyderabad center, fast-growing"
+
+    - name: "Atlassian"
+      careers_url: "https://www.atlassian.com/company/careers"
+      origin: "Australia"
+      notes: "Bangalore office, engineering-first culture"
+
+    - name: "Cisco"
+      careers_url: "https://jobs.cisco.com/"
+      origin: "US"
+      notes: "Large Bangalore presence, established"
+
+    - name: "VMware (Broadcom)"
+      careers_url: "https://careers.broadcom.com/"
+      origin: "US"
+      notes: "Major India R&D center"
+
+    - name: "Intuit"
+      careers_url: "https://www.intuit.com/careers/"
+      origin: "US"
+      notes: "Bangalore R&D, great culture"
+
+    - name: "Twitter / X"
+      careers_url: "https://careers.x.com/"
+      origin: "US"
+
+    - name: "Databricks"
+      careers_url: "https://www.databricks.com/company/careers"
+      origin: "US"
+      notes: "India engineering, data/AI focus"
+
+    - name: "Snowflake"
+      careers_url: "https://careers.snowflake.com/"
+      origin: "US"
+      notes: "India engineering hub"
+
+    - name: "Palo Alto Networks"
+      careers_url: "https://jobs.paloaltonetworks.com/"
+      origin: "US"
+      notes: "Bangalore office, cybersecurity"
+
+  tier3_european:
+    - name: "SAP"
+      careers_url: "https://jobs.sap.com/"
+      origin: "Germany"
+      notes: "Large India labs, Bangalore/Gurgaon, established TPM"
+
+    - name: "Siemens"
+      careers_url: "https://jobs.siemens.com/"
+      origin: "Germany"
+      notes: "India tech hub, digital industries"
+
+    - name: "Mercedes-Benz"
+      careers_url: "https://jobs.mercedes-benz.com/"
+      origin: "Germany"
+      notes: "India R&D center, MBRDI Bangalore"
+
+    - name: "BMW"
+      careers_url: "https://www.bmwgroup.com/careers"
+      origin: "Germany"
+      notes: "India tech center"
+
+    - name: "Bosch"
+      careers_url: "https://www.bosch.com/careers/"
+      origin: "Germany"
+      notes: "Massive India presence, Bangalore"
+
+    - name: "ThoughtWorks"
+      careers_url: "https://www.thoughtworks.com/careers"
+      origin: "US/India"
+      notes: "Strong India roots, great engineering culture"
+
+    - name: "Ericsson"
+      careers_url: "https://www.ericsson.com/en/careers"
+      origin: "Sweden"
+      notes: "India R&D, telecom tech"
+
+    - name: "Nokia"
+      careers_url: "https://www.nokia.com/careers/"
+      origin: "Finland"
+      notes: "India R&D center"
+
+    - name: "Philips"
+      careers_url: "https://www.careers.philips.com/"
+      origin: "Netherlands"
+      notes: "India innovation hub, healthtech"
+
+    - name: "Shell"
+      careers_url: "https://www.shell.com/careers"
+      origin: "UK/Netherlands"
+      notes: "India tech center, Bangalore"
+
+    - name: "Unilever"
+      careers_url: "https://careers.unilever.com/"
+      origin: "UK/Netherlands"
+      notes: "India is major market, digital transformation"
+
+    - name: "HSBC"
+      careers_url: "https://www.hsbc.com/careers"
+      origin: "UK"
+      notes: "Large India tech center, competitive pay"
+
+    - name: "Barclays"
+      careers_url: "https://home.barclays/careers/"
+      origin: "UK"
+      notes: "India tech hub, Pune"
+
+    - name: "Deutsche Bank"
+      careers_url: "https://careers.db.com/"
+      origin: "Germany"
+      notes: "India tech center, competitive comp"
+
+    - name: "UBS"
+      careers_url: "https://www.ubs.com/careers"
+      origin: "Switzerland"
+      notes: "India tech hub"
+
+    - name: "Credit Suisse (UBS)"
+      careers_url: "https://www.ubs.com/careers"
+      origin: "Switzerland"
+      notes: "Pune tech center, merged with UBS"
+
+  tier4_korean_asian:
+    - name: "Samsung"
+      careers_url: "https://www.samsung.com/global/careers/"
+      origin: "South Korea"
+      notes: "Samsung R&D India, large presence"
+
+    - name: "LG Electronics"
+      careers_url: "https://www.lg.com/global/careers"
+      origin: "South Korea"
+      notes: "India operations, R&D"
+
+    - name: "Hyundai"
+      careers_url: "https://careers.hyundai.com/"
+      origin: "South Korea"
+      notes: "India manufacturing + tech"
+
+    - name: "SK Hynix"
+      careers_url: "https://www.skhynix.com/eng/careers"
+      origin: "South Korea"
+
+    - name: "Grab"
+      careers_url: "https://grab.careers/"
+      origin: "Singapore"
+      notes: "India engineering hub"
+
+    - name: "Sea Group (Shopee)"
+      careers_url: "https://careers.sea.com/"
+      origin: "Singapore"
+
+    - name: "ByteDance (TikTok)"
+      careers_url: "https://jobs.bytedance.com/"
+      origin: "China"
+      notes: "India operations (where active)"
+
+search_queries:
+  linkedin:
+    # Japanese company focused (priority)
+    - "Japanese company program manager India expat"
+    - "Japan tech program manager India"
+    - "TPM Japanese company Bangalore"
+    - "program manager Japan India delivery"
+    - "technical program manager Japanese MNC India"
+    - "expat manager India Japanese"
+    # Global searches
+    - "technical program manager India 1 crore"
+    - "senior program manager MNC India"
+    - "engineering program manager Bangalore"
+    - "global delivery manager India"
+    - "program director India technology"
+    - "TPM senior India remote"
+
+  indeed:
+    - "program manager Japanese company India"
+    - "technical program manager Japan India"
+    - "delivery manager Japanese MNC"
+    - "senior program manager India"
+    - "technical program manager MNC India"
+    - "engineering program manager Bangalore Mumbai"
+
+  naukri:
+    - "program manager Japanese company"
+    - "technical program manager Japan"
+    - "delivery manager Japan MNC"
+    - "senior technical program manager"
+    - "program manager MNC 1 crore"
+    - "engineering program manager senior"
+    - "global delivery manager"
+
+  glassdoor:
+    - "program manager Japanese company India"
+    - "technical program manager India senior"
+
+filters:
+  min_company_rating: 3.5
+  min_salary_inr: 10000000
+  exclude_keywords:
+    - "intern"
+    - "fresher"
+    - "junior"
+    - "entry level"
+    - "contractor"
+    - "part-time"
+  # Broadened for global companies — no longer requires Japan-specific keywords
+  require_any_keyword:
+    - "expat"
+    - "Japan"
+    - "Japanese"
+    - "global"
+    - "cross-border"
+    - "international"
+    - "overseas"
+    - "program manager"
+    - "TPM"
+    - "delivery"
+    - "senior"
+    - "director"
+    - "MNC"
+
+notifications:
+  email:
+    enabled: false
+    recipients: []
+  slack:
+    enabled: false
+    webhook_url: ""
+  github_issues:
+    enabled: true
+    labels: ["job-match", "auto-found"]
+  summary_file:
+    enabled: true
+    path: "results/latest_matches.json"

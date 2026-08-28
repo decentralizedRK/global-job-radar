@@ -1,0 +1,104 @@
+name: Automated Job Search
+
+on:
+  schedule:
+    # Run twice daily: 6 AM and 6 PM IST (12:30 AM and 12:30 PM UTC)
+    - cron: '30 0 * * *'
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+    inputs:
+      sources:
+        description: 'Sources to search (comma-separated: linkedin,indeed,naukri,careers)'
+        required: false
+        default: 'linkedin,indeed,naukri,careers'
+      notify:
+        description: 'Send notifications'
+        required: false
+        default: 'true'
+        type: boolean
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run job search
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          cd scripts
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            SOURCES=$(echo "${{ github.event.inputs.sources }}" | tr ',' ' ')
+            NOTIFY_FLAG=""
+            if [ "${{ github.event.inputs.notify }}" = "false" ]; then
+              NOTIFY_FLAG="--no-notify"
+            fi
+            python main.py --sources $SOURCES $NOTIFY_FLAG
+          else
+            python main.py
+          fi
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add results/
+          if git diff --staged --quiet; then
+            echo "No new results to commit"
+          else
+            git commit -m "chore: update job search results $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-results-${{ github.run_number }}
+          path: results/
+          retention-days: 30
+
+  weekly-report:
+    runs-on: ubuntu-latest
+    needs: search
+    if: github.event.schedule == '30 0 * * 1' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate weekly summary
+        run: |
+          echo "## Weekly Job Search Summary" > results/weekly_summary.md
+          echo "" >> results/weekly_summary.md
+          echo "Generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)" >> results/weekly_summary.md
+          if [ -f results/latest_matches.json ]; then
+            echo "" >> results/weekly_summary.md
+            python3 -c "
+          import json
+          with open('results/latest_matches.json') as f:
+              data = json.load(f)
+          print(f'- **Total matches:** {data.get(\"top_matches_count\", 0)}')
+          print(f'- **Total tracked:** {data.get(\"total_tracked\", 0)}')
+          for m in data.get('matches', [])[:10]:
+              score = m.get('match_score', 0)
+              expat = ' [EXPAT]' if m.get('is_expat_role') else ''
+              print(f'  - **{m[\"title\"]}**{expat} at {m[\"company\"]} ({m[\"location\"]}) - Score: {score}')
+          " >> results/weekly_summary.md
+          fi
