@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Job Radar</title>
+<meta name="description" content="Automated job search dashboard for Tech Program Manager & AI roles at global MNCs with India operations. Updated twice daily via GitHub Actions.">
+<meta property="og:title" content="Global Job Radar">
+<meta property="og:description" content="Tech Program Manager & AI Roles at MNCs with India Operations — auto-updated twice daily.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Global Job Radar">
+<meta name="twitter:description" content="Automated job search dashboard for TPM & AI roles at global MNCs.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root {
+  --canvas: #f5f4f0;
+  --surface: #ffffff;
+  --raised: #ffffff;
+  --input: #eceae4;
+  --hover: #f0eeea;
+  --rule: #e0ded8;
+  --rule-light: #eceae4;
+  --text: #1a1a1f;
+  --text-2: #5c5b66;
+  --text-3: #8e8d96;
+  --signal: #2b59e3;
+  --signal-hover: #1f47c7;
+  --signal-wash: #eef2fc;
+  --strong: #178a56;
+  --strong-bg: #e3f5ec;
+  --strong-border: #90ddb5;
+  --caution: #c47d14;
+  --caution-bg: #fdf3e0;
+  --caution-border: #f0c96e;
+  --muted: #8e8d96;
+  --muted-bg: #eceae4;
+  --danger: #d03e3e;
+  --danger-bg: #fce8e8;
+  --shadow-s: 0 1px 2px rgba(26,26,31,0.04);
+  --shadow: 0 1px 4px rgba(26,26,31,0.06);
+  --shadow-m: 0 4px 16px rgba(26,26,31,0.08);
+  --radius: 8px;
+  --radius-s: 5px;
+  --radius-pill: 100px;
+  --display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --body: 'IBM Plex Sans', system-ui, sans-serif;
+  --ease: 0.18s ease;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --canvas: #12131a;
+    --surface: #181a24;
+    --raised: #1e2130;
+    --input: #242736;
+    --hover: #2a2d3e;
+    --rule: #2c2f40;
+    --rule-light: #232638;
+    --text: #e2e2e8;
+    --text-2: #9b9ba6;
+    --text-3: #6a6a78;
+    --signal: #5b8def;
+    --signal-hover: #4a7de0;
+    --signal-wash: #1c2544;
+    --strong: #4ade80;
+    --strong-bg: #142e22;
+    --strong-border: #1a5c38;
+    --caution: #f0c050;
+    --caution-bg: #302612;
+    --caution-border: #6b4f12;
+    --muted: #6a6a78;
+    --muted-bg: #242736;
+    --danger: #f87171;
+    --danger-bg: #301818;
+    --shadow-s: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow: 0 1px 4px rgba(0,0,0,0.35);
+    --shadow-m: 0 4px 16px rgba(0,0,0,0.4);
+  }
+}
+:root[data-theme="dark"] {
+  --canvas: #12131a;
+  --surface: #181a24;
+  --raised: #1e2130;
+  --input: #242736;
+  --hover: #2a2d3e;
+  --rule: #2c2f40;
+  --rule-light: #232638;
+  --text: #e2e2e8;
+  --text-2: #9b9ba6;
+  --text-3: #6a6a78;
+  --signal: #5b8def;
+  --signal-hover: #4a7de0;
+  --signal-wash: #1c2544;
+  --strong: #4ade80;
+  --strong-bg: #142e22;
+  --strong-border: #1a5c38;
+  --caution: #f0c050;
+  --caution-bg: #302612;
+  --caution-border: #6b4f12;
+  --muted: #6a6a78;
+  --muted-bg: #242736;
+  --danger: #f87171;
+  --danger-bg: #301818;
+  --shadow-s: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow: 0 1px 4px rgba(0,0,0,0.35);
+  --shadow-m: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--body);
+  background: var(--canvas);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background var(--ease), color var(--ease);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === HEADER === */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+  padding: 20px 0;
+}
+.wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.brand h1 {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.brand-sub {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 400;
+}
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--text-2);
+  font-family: var(--display);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ease);
+  white-space: nowrap;
+}
+.refresh-btn:hover { border-color: var(--signal); color: var(--signal); }
+.refresh-btn.running { pointer-events: none; opacity: 0.7; }
+.refresh-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.refresh-btn.running svg { animation: spin 0.7s linear infinite; }
+.refresh-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 10px 18px;
+  border-radius: var(--radius-s);
+  font-family: var(--body);
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 200;
+  box-shadow: var(--shadow-m);
+  transform: translateY(120%);
+  transition: transform 0.3s ease;
+  max-width: 380px;
+}
+.refresh-toast.show { transform: translateY(0); }
+.refresh-toast.ok { background: var(--strong-bg); color: var(--strong); border: 1px solid var(--strong-border); }
+.refresh-toast.err { background: var(--danger-bg); color: var(--danger); border: 1px solid var(--danger); }
+.refresh-toast.info { background: var(--signal-wash); color: var(--signal); border: 1px solid var(--signal); }
+/* PAT MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 24px;
+  max-width: 440px;
+  width: 100%;
+  box-shadow: var(--shadow-m);
+}
+.modal h3 {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.modal p {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.modal input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--input);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 13px;
+  outline: none;
+  margin-bottom: 14px;
+}
+.modal input:focus { border-color: var(--signal); }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.modal-actions button {
+  padding: 7px 16px;
+  border-radius: var(--radius-s);
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ease);
+}
+.modal-cancel { background: var(--input); border: 1px solid var(--rule); color: var(--text-2); }
+.modal-cancel:hover { border-color: var(--text-3); }
+.modal-save { background: var(--signal); border: 1px solid var(--signal); color: #fff; }
+.modal-save:hover { background: var(--signal-hover); }
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--input);
+  color: var(--text-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all var(--ease);
+  flex-shrink: 0;
+}
+.theme-btn:hover { border-color: var(--text-3); }
+
+/* STATS STRIP */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+.stat { display: inline-flex; align-items: center; gap: 5px; }
+.stat strong {
+  font-weight: 600;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.stat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--strong);
+  flex-shrink: 0;
+}
+
+/* === FILTERS === */
+.filters {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--canvas);
+  border-bottom: 1px solid var(--rule);
+  padding: 12px 0;
+  transition: box-shadow var(--ease);
+}
+.filters.stuck { box-shadow: var(--shadow-m); }
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.search-wrap {
+  flex: 1 1 260px;
+  position: relative;
+}
+.search-wrap svg {
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-3);
+  pointer-events: none;
+}
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color var(--ease);
+}
+.search-input:focus { border-color: var(--signal); }
+.search-input::placeholder { color: var(--text-3); }
+
+.sel {
+  padding: 8px 28px 8px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%238e8d96'%3E%3Cpath d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  transition: border-color var(--ease);
+}
+.sel:focus { border-color: var(--signal); }
+
+/* CHIPS */
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chip {
+  padding: 4px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--text-3);
+  font-family: var(--body);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--ease);
+  user-select: none;
+  white-space: nowrap;
+}
+.chip:hover { border-color: var(--signal); color: var(--signal); }
+.chip.on {
+  background: var(--signal);
+  color: #fff;
+  border-color: var(--signal);
+}
+
+/* EXPAT TOGGLE */
+.toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--text-2);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+.toggle-track {
+  width: 34px;
+  height: 18px;
+  background: var(--rule);
+  border-radius: 9px;
+  position: relative;
+  transition: background var(--ease);
+  flex-shrink: 0;
+}
+.toggle-track::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--ease);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+.toggle-label.on .toggle-track { background: var(--signal); }
+.toggle-label.on .toggle-track::after { transform: translateX(16px); }
+
+/* META ROW */
+.filter-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
+.clear-btn {
+  padding: 3px 10px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text-3);
+  font-family: var(--body);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--ease);
+}
+.clear-btn:hover { border-color: var(--danger); color: var(--danger); }
+.filter-count {
+  display: inline-block;
+  background: var(--signal);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 0 6px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+  vertical-align: 1px;
+}
+
+/* === MAIN === */
+.main-area {
+  padding: 20px 0 48px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 1060px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 660px) { .grid { grid-template-columns: 1fr; } }
+
+/* === JOB CARD === */
+.card {
+  background: var(--raised);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius);
+  padding: 16px 16px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: border-color var(--ease), box-shadow var(--ease);
+  overflow: hidden;
+}
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+.card.tier-high::before { background: var(--strong); }
+.card.tier-mid::before { background: var(--caution); }
+.card.tier-low::before { background: var(--muted-bg); }
+.card:hover {
+  border-color: var(--signal);
+  box-shadow: var(--shadow-m);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card, .card:hover { transition: none; }
+}
+
+/* CARD TOP */
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.score {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  font-variant-numeric: tabular-nums;
+}
+.score svg {
+  position: absolute;
+  inset: 0;
+  width: 42px;
+  height: 42px;
+  transform: rotate(-90deg);
+}
+.score svg circle { fill: none; stroke-width: 2.5; }
+.score .ring-bg { stroke: var(--rule); }
+.score .ring-fg { stroke-linecap: round; }
+.score-h { color: var(--strong); }
+.score-h .ring-fg { stroke: var(--strong); }
+.score-m { color: var(--caution); }
+.score-m .ring-fg { stroke: var(--caution); }
+.score-l { color: var(--muted); }
+.score-l .ring-fg { stroke: var(--muted); }
+
+.card-head { flex: 1; min-width: 0; }
+.card-title {
+  font-family: var(--display);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.35;
+  letter-spacing: -0.15px;
+  transition: color var(--ease);
+}
+.card-title:hover { color: var(--signal); }
+
+.company-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 2px;
+}
+.flag { font-size: 13px; line-height: 1; }
+.origin-label {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+/* META */
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.mi {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+.mi-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+.salary-val {
+  font-weight: 600;
+  color: var(--strong);
+  font-size: 12.5px;
+}
+.salary-na {
+  font-style: italic;
+  color: var(--text-3);
+  font-size: 12px;
+}
+
+/* BADGES */
+.badges { display: flex; flex-wrap: wrap; gap: 4px; }
+.b {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 10.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+.b-expat {
+  background: var(--strong-bg);
+  color: var(--strong);
+  border: 1px solid var(--strong-border);
+  font-weight: 600;
+}
+.b-src {
+  background: var(--signal-wash);
+  color: var(--signal);
+}
+.b-src.s-linkedin { background: #dce6fb; color: #1a4db8; }
+.b-src.s-indeed { background: #fef3e0; color: #8a5d0a; }
+.b-src.s-naukri { background: #d9e9fb; color: #16408a; }
+.b-src.s-glassdoor { background: #ddf4e6; color: #126a3c; }
+.b-src.s-wellfound { background: #f8e3f0; color: #8c1460; }
+.b-src.s-builtin { background: #e2e0f8; color: #3a2f96; }
+.b-src.s-google_jobs { background: #e6f0e4; color: #2a6a24; }
+.b-src.s-careers_page { background: var(--muted-bg); color: var(--text-3); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .b-src.s-linkedin { background: #1a2844; color: #7aabf7; }
+  :root:not([data-theme="light"]) .b-src.s-indeed { background: #302410; color: #f0c050; }
+  :root:not([data-theme="light"]) .b-src.s-naukri { background: #142240; color: #6aa0f0; }
+  :root:not([data-theme="light"]) .b-src.s-glassdoor { background: #122a1e; color: #60d090; }
+  :root:not([data-theme="light"]) .b-src.s-wellfound { background: #301424; color: #e870b8; }
+  :root:not([data-theme="light"]) .b-src.s-builtin { background: #1c1a40; color: #9892e0; }
+  :root:not([data-theme="light"]) .b-src.s-google_jobs { background: #182818; color: #80c880; }
+  :root:not([data-theme="light"]) .b-src.s-careers_page { background: var(--muted-bg); color: var(--text-3); }
+}
+:root[data-theme="dark"] .b-src.s-linkedin { background: #1a2844; color: #7aabf7; }
+:root[data-theme="dark"] .b-src.s-indeed { background: #302410; color: #f0c050; }
+:root[data-theme="dark"] .b-src.s-naukri { background: #142240; color: #6aa0f0; }
+:root[data-theme="dark"] .b-src.s-glassdoor { background: #122a1e; color: #60d090; }
+:root[data-theme="dark"] .b-src.s-wellfound { background: #301424; color: #e870b8; }
+:root[data-theme="dark"] .b-src.s-builtin { background: #1c1a40; color: #9892e0; }
+:root[data-theme="dark"] .b-src.s-google_jobs { background: #182818; color: #80c880; }
+:root[data-theme="dark"] .b-src.s-careers_page { background: var(--muted-bg); color: var(--text-3); }
+
+.b-tag {
+  background: var(--input);
+  color: var(--text-3);
+  font-size: 10px;
+}
+
+/* DESCRIPTION */
+.card-desc {
+  font-size: 12.5px;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.desc-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.desc-clamp.open { display: block; -webkit-line-clamp: unset; }
+.more-btn {
+  background: none;
+  border: none;
+  color: var(--signal);
+  font-family: var(--body);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 0;
+}
+.more-btn:hover { text-decoration: underline; }
+
+/* CARD FOOTER */
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule-light);
+}
+.foot-text {
+  font-size: 11px;
+  color: var(--text-3);
+}
+.apply {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  background: var(--signal);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-s);
+  font-family: var(--display);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--ease);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.apply:hover { background: var(--signal-hover); }
+.apply svg { width: 12px; height: 12px; }
+
+/* === STATES === */
+.state {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--text-2);
+}
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 2.5px solid var(--rule);
+  border-top-color: var(--signal);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto 14px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.state-icon { font-size: 40px; margin-bottom: 10px; line-height: 1; }
+.state-h {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.state-p { font-size: 13.5px; max-width: 360px; margin: 0 auto; }
+
+/* === FOOTER === */
+.footer {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 12px;
+  color: var(--text-3);
+  border-top: 1px solid var(--rule);
+}
+.footer a { color: var(--signal); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* TOOLTIP */
+[data-tip] { position: relative; }
+[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px 8px;
+  background: var(--text);
+  color: var(--canvas);
+  font-size: 11px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .brand h1 { font-size: 18px; }
+  .brand-sub { display: none; }
+  .wrap { padding: 0 16px; }
+  .stats { gap: 4px 14px; }
+  .search-wrap { flex: 1 1 100%; }
+  .sel { flex: 1 1 calc(50% - 4px); }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <div class="header-row">
+      <div class="brand">
+        <h1>Global Job Radar</h1>
+        <span class="brand-sub">TPM & AI Roles at MNCs with India Operations</span>
+      </div>
+      <div class="header-actions">
+        <button class="refresh-btn" onclick="triggerRefresh()" id="refreshBtn" aria-label="Refresh data">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          <span id="refreshLabel">Refresh</span>
+        </button>
+        <button class="theme-btn" onclick="flipTheme()" id="themeBtn" aria-label="Toggle theme">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path id="themeIcon" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 12.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="stats" id="stats">
+      <span class="stat"><span class="stat-dot"></span> <strong id="sTotal">—</strong> tracked</span>
+      <span class="stat"><strong id="sMatches">—</strong> top matches</span>
+      <span class="stat">Updated <strong id="sUpdated">—</strong></span>
+      <span class="stat"><strong id="sSources">—</strong> sources</span>
+    </div>
+  </div>
+</header>
+
+<div class="filters" id="filtersBar">
+  <div class="wrap">
+    <div class="filter-row">
+      <div class="search-wrap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" type="text" id="q" placeholder="Search title, company, location..." autocomplete="off">
+      </div>
+      <select class="sel" id="fScore"><option value="">All scores</option><option value="h">High (60+)</option><option value="m">Medium (30–59)</option><option value="l">Low (&lt;30)</option></select>
+      <select class="sel" id="fOrigin"><option value="">All origins</option><option value="Japan">Japan</option><option value="US">US</option><option value="European">European</option><option value="Korean">Korean</option><option value="Other">Other</option></select>
+      <select class="sel" id="fLoc"><option value="">All locations</option></select>
+      <select class="sel" id="fSort"><option value="score">Score</option><option value="date">Newest</option><option value="az">Company A–Z</option><option value="sal">Salary</option></select>
+    </div>
+    <div class="filter-row" style="margin-top:8px">
+      <div class="chips" id="srcChips"></div>
+      <label class="toggle-label" id="expatTgl" onclick="flipExpat()">
+        <span class="toggle-track"></span> Expat only
+      </label>
+    </div>
+    <div class="filter-meta">
+      <span id="count">Loading…</span>
+      <button class="clear-btn" id="clearBtn" onclick="clearAll()" style="display:none">Clear<span class="filter-count" id="fc">0</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="main-area">
+  <div class="wrap">
+    <div id="loading" class="state"><div class="spinner"></div><div class="state-h">Loading jobs…</div><div class="state-p">Fetching latest matches from the radar pipeline</div></div>
+    <div id="error" class="state" style="display:none"></div>
+    <div id="empty" class="state" style="display:none"><div class="state-icon">🔍</div><div class="state-h">No matches</div><div class="state-p">Adjust your filters or search to see results</div></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</div>
+
+<div class="refresh-toast" id="toast"></div>
+<div class="modal-overlay" id="patModal" style="display:none">
+  <div class="modal">
+    <h3>GitHub Token Required</h3>
+    <p>To trigger workflows from the dashboard, enter a GitHub Personal Access Token with <code>repo</code> and <code>workflow</code> scopes. It's stored only in your browser's localStorage.</p>
+    <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+    <div class="modal-actions">
+      <button class="modal-cancel" onclick="closePatModal()">Cancel</button>
+      <button class="modal-save" onclick="savePat()">Save & Run</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  Powered by <a href="https://github.com/decentralizedRK/global-job-radar" target="_blank" rel="noopener">Global Job Radar</a> · Auto-updated via GitHub Actions · Data refreshed twice daily
+</footer>
+
+<script>
+const SAMPLE={generated_at:new Date().toISOString(),total_tracked:187,top_matches_count:6,matches:[
+{id:"a1b2c3d4e5f67890",title:"Technical Program Manager — Global Delivery",company:"Toyota Motor Corporation",location:"Bangalore, India",url:"https://linkedin.com/jobs/view/123456",source:"linkedin",description:"We are looking for a Technical Program Manager to lead cross-functional delivery across our global digital platform initiatives. You will work closely with engineering teams in Japan, India, and the US to drive large-scale automotive software programs. Ideal candidate has experience with Japanese business culture and global stakeholder management.",salary_text:"₹80L – ₹1.2Cr per annum",posted_date:"2026-08-25",company_origin:"Japan",experience_level:"10–15 years",is_expat_role:true,match_score:85,tags:["tier1_japanese_priority"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-20T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:5},
+{id:"b2c3d4e5f6789012",title:"AI Program Manager — GenAI Platform",company:"Google",location:"Hyderabad, India",url:"https://careers.google.com/jobs/ai-pm-456",source:"google_jobs",description:"Lead the program management of Google's GenAI platform initiatives in India. Drive alignment across ML engineering, product, and infrastructure teams. Define roadmaps, manage risks, and ensure timely delivery of AI-powered products reaching billions of users worldwide.",salary_text:"₹1.5Cr – ₹2Cr per annum",posted_date:"2026-08-26",company_origin:"US",experience_level:"12+ years",is_expat_role:false,match_score:78,tags:["tier2_us_global_tech"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-22T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:3},
+{id:"c3d4e5f678901234",title:"Senior Delivery Manager — Digital Transformation",company:"Sony",location:"Mumbai, India",url:"https://www.sony.com/careers/job/789",source:"naukri",description:"Sony India is seeking a Senior Delivery Manager to oversee digital transformation programs across our entertainment and electronics divisions. The role involves coordinating with teams in Tokyo and managing large-scale program deliveries with agile methodologies.",salary_text:"₹75L – ₹1Cr per annum",posted_date:"2026-08-23",company_origin:"Japan",experience_level:"8–12 years",is_expat_role:false,match_score:72,tags:["tier1_japanese_priority"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-23T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:2},
+{id:"d4e5f67890123456",title:"Engineering Program Manager — Cloud Platform",company:"SAP",location:"Bangalore, India",url:"https://jobs.sap.com/job/epm-321",source:"glassdoor",description:"SAP Labs India is hiring an Engineering Program Manager to lead cloud platform delivery. Drive cross-team coordination for enterprise software releases, manage dependencies, and ensure high-quality on-time delivery across globally distributed teams in Germany and India.",salary_text:"",posted_date:"2026-08-24",company_origin:"Germany",experience_level:"10+ years",is_expat_role:false,match_score:55,tags:["tier3_european"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-24T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:2},
+{id:"e5f6789012345678",title:"AI/ML Program Manager — Computer Vision",company:"Samsung",location:"Noida, India",url:"https://samsung.com/careers/aiml-pm",source:"wellfound",description:"Samsung R&D India seeks an AI/ML Program Manager to drive computer vision and on-device AI programs. Coordinate across research, engineering, and product teams in Seoul and Noida. Experience with ML pipelines and model deployment at scale preferred.",salary_text:"₹60L – ₹85L per annum",posted_date:"2026-08-22",company_origin:"South Korea",experience_level:"8+ years",is_expat_role:false,match_score:48,tags:["tier4_korean_asian"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-22T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:4},
+{id:"f67890123456789a",title:"Technical Program Manager — Payments Infrastructure",company:"Stripe",location:"Remote – India",url:"https://stripe.com/jobs/tpm-remote-999",source:"builtin",description:"Stripe is hiring a remote Technical Program Manager based in India to lead payment infrastructure programs. You will drive complex cross-functional initiatives across engineering, security, and compliance teams. Strong communication and distributed team leadership skills required.",salary_text:"₹1.2Cr – ₹1.8Cr per annum",posted_date:"2026-08-27",company_origin:"US",experience_level:"10+ years",is_expat_role:false,match_score:22,tags:["tier2_us_global_tech"],scraped_at:"2026-08-28T06:00:00",first_seen:"2026-08-27T06:00:00",last_seen:"2026-08-28T06:00:00",seen_count:1}
+]};
+
+const SRC_LABEL={linkedin:"LinkedIn",linkedin_xray:"LinkedIn",indeed:"Indeed",naukri:"Naukri",glassdoor:"Glassdoor",wellfound:"Wellfound",builtin:"BuiltIn",google_jobs:"Google Jobs",google_company_search:"Google Jobs",careers_page:"Careers Page"};
+const FLAGS={"Japan":"🇯🇵","US":"🇺🇸","Germany":"🇩🇪","European":"🇪🇺","South Korea":"🇰🇷","Korean":"🇰🇷","UK":"🇬🇧","Sweden":"🇸🇪","Finland":"🇫🇮","Netherlands":"🇳🇱","Switzerland":"🇨🇭","Australia":"🇦🇺","Singapore":"🇸🇬","China":"🇨🇳"};
+let jobs=[],srcSet=new Set(),expat=false;
+
+function boot(){
+  applyTheme();
+  fetch('./results/latest_matches.json')
+    .then(r=>{if(!r.ok)throw r;return r.json()})
+    .then(d=>d&&d.matches&&d.matches.length?load(d):load(SAMPLE))
+    .catch(()=>load(SAMPLE));
+}
+
+function normSrc(s){return s==='linkedin_xray'?'linkedin':s==='google_company_search'?'google_jobs':s}
+
+function load(d){
+  jobs=d.matches||[];
+  document.getElementById('loading').style.display='none';
+  const srcs=new Set(jobs.map(j=>normSrc(j.source)));
+  document.getElementById('sTotal').textContent=(d.total_tracked||jobs.length).toLocaleString();
+  document.getElementById('sMatches').textContent=(d.top_matches_count||jobs.length).toLocaleString();
+  document.getElementById('sSources').textContent=srcs.size;
+  if(d.generated_at){const dt=new Date(d.generated_at);document.getElementById('sUpdated').textContent=relTime(dt);document.getElementById('sUpdated').parentElement.setAttribute('data-tip',dt.toLocaleString())}
+  buildChips(srcs);buildLocs();listen();render();
+}
+
+function buildChips(srcs){
+  const c=document.getElementById('srcChips');
+  const arr=[...srcs].sort();
+  c.innerHTML=arr.map(s=>`<span class="chip on" data-s="${s}" onclick="flipSrc(this)">${SRC_LABEL[s]||s}</span>`).join('');
+  srcSet=new Set(arr);
+}
+function buildLocs(){
+  const sel=document.getElementById('fLoc');
+  [...new Set(jobs.map(j=>j.location).filter(Boolean))].sort().forEach(l=>{const o=document.createElement('option');o.value=l;o.textContent=l;sel.appendChild(o)});
+}
+function listen(){
+  const d=fn=>{let t;return()=>{clearTimeout(t);t=setTimeout(fn,180)}};
+  document.getElementById('q').addEventListener('input',d(render));
+  ['fScore','fOrigin','fLoc','fSort'].forEach(id=>document.getElementById(id).addEventListener('change',render));
+  window.addEventListener('scroll',()=>document.getElementById('filtersBar').classList.toggle('stuck',scrollY>80));
+}
+
+function flipSrc(el){const s=el.dataset.s;srcSet.has(s)?(srcSet.delete(s),el.classList.remove('on')):(srcSet.add(s),el.classList.add('on'));render()}
+function flipExpat(){expat=!expat;document.getElementById('expatTgl').classList.toggle('on',expat);render()}
+function clearAll(){
+  document.getElementById('q').value='';
+  ['fScore','fOrigin','fLoc'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('fSort').value='score';
+  expat=false;document.getElementById('expatTgl').classList.remove('on');
+  document.querySelectorAll('#srcChips .chip').forEach(c=>{c.classList.add('on');srcSet.add(c.dataset.s)});
+  render();
+}
+function activeCount(){
+  let n=0;
+  if(document.getElementById('q').value)n++;
+  if(document.getElementById('fScore').value)n++;
+  if(document.getElementById('fOrigin').value)n++;
+  if(document.getElementById('fLoc').value)n++;
+  if(expat)n++;
+  const all=document.querySelectorAll('#srcChips .chip');
+  if(all.length&&srcSet.size<all.length)n++;
+  return n;
+}
+
+function mapOrigin(o){
+  if(!o)return'Other';const l=o.toLowerCase();
+  if(l==='japan'||l==='japanese')return'Japan';
+  if(l==='us'||l==='usa')return'US';
+  if(['germany','german','uk','british','france','french','sweden','swedish','finland','finnish','netherlands','dutch','switzerland','swiss','european','uk/netherlands','us/india'].includes(l))return'European';
+  if(l==='south korea'||l==='korean')return'Korean';
+  return'Other';
+}
+function parseSal(t){if(!t)return 0;let m=t.match(/([\d,.]+)\s*(Cr|crore)/i);if(m)return parseFloat(m[1].replace(/,/g,''))*1e7;m=t.match(/([\d,.]+)\s*(L|lakh|lpa)/i);if(m)return parseFloat(m[1].replace(/,/g,''))*1e5;m=t.match(/[\d,]+/);return m?parseInt(m[0].replace(/,/g,''),10):0}
+function relTime(d){const s=Math.floor((Date.now()-d)/1e3);if(s<60)return'just now';if(s<3600)return Math.floor(s/60)+'m ago';if(s<86400)return Math.floor(s/3600)+'h ago';const days=Math.floor(s/86400);return days===1?'1 day ago':days<30?days+' days ago':d.toLocaleDateString()}
+function daysSince(d){return Math.floor((Date.now()-new Date(d))/864e5)}
+function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
+function escA(s){return(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;')}
+
+function render(){
+  const q=document.getElementById('q').value.toLowerCase().trim();
+  const sv=document.getElementById('fScore').value;
+  const ov=document.getElementById('fOrigin').value;
+  const lv=document.getElementById('fLoc').value;
+  const so=document.getElementById('fSort').value;
+  let f=jobs.filter(j=>{
+    if(q&&!`${j.title} ${j.company} ${j.description} ${j.location}`.toLowerCase().includes(q))return false;
+    if(!srcSet.has(normSrc(j.source)))return false;
+    const sc=j.match_score||0;
+    if(sv==='h'&&sc<60)return false;if(sv==='m'&&(sc<30||sc>=60))return false;if(sv==='l'&&sc>=30)return false;
+    if(ov&&mapOrigin(j.company_origin)!==ov)return false;
+    if(lv&&j.location!==lv)return false;
+    if(expat&&!j.is_expat_role)return false;
+    return true;
+  });
+  f.sort((a,b)=>{
+    if(so==='score')return(b.match_score||0)-(a.match_score||0);
+    if(so==='date')return new Date(b.posted_date||0)-new Date(a.posted_date||0);
+    if(so==='az')return(a.company||'').localeCompare(b.company||'');
+    if(so==='sal')return parseSal(b.salary_text)-parseSal(a.salary_text);
+    return 0;
+  });
+  const g=document.getElementById('grid'),em=document.getElementById('empty'),ct=document.getElementById('count');
+  const ac=activeCount(),cb=document.getElementById('clearBtn'),fc=document.getElementById('fc');
+  ct.textContent=`Showing ${f.length} of ${jobs.length} matches`;
+  cb.style.display=ac?'':'none';fc.textContent=ac;
+  if(!f.length){g.innerHTML='';em.style.display='';return}
+  em.style.display='none';
+  g.innerHTML=f.map(card).join('');
+}
+
+function card(j){
+  const sc=Math.round(j.match_score||0);
+  const tier=sc>=60?'high':sc>=30?'mid':'low';
+  const C=2*Math.PI*18,off=C-(sc/100)*C;
+  const o=j.company_origin||'';
+  const fl=FLAGS[o]||FLAGS[mapOrigin(o)]||'';
+  const ns=normSrc(j.source);
+  const sl=SRC_LABEL[j.source]||j.source;
+  const sal=j.salary_text?`<span class="salary-val">${esc(j.salary_text)}</span>`:`<span class="salary-na">Not disclosed</span>`;
+  const pd=j.posted_date?relTime(new Date(j.posted_date)):'';
+  const pdTip=j.posted_date?new Date(j.posted_date).toLocaleDateString():'';
+  const desc=esc(j.description||'');
+  const fs=j.first_seen?daysSince(j.first_seen):null;
+  const sn=j.seen_count||0;
+  const fp=[];if(fs!==null)fp.push(`First seen ${fs}d ago`);if(sn>1)fp.push(`Spotted ${sn}×`);
+  let bd='';
+  if(j.is_expat_role)bd+='<span class="b b-expat">Expat / Relocation</span>';
+  bd+=`<span class="b b-src s-${ns}">${sl}</span>`;
+  if(j.tags)j.tags.forEach(t=>{if(/expat|cross.border/i.test(t))return;bd+=`<span class="b b-tag">${t.replace(/_/g,' ').replace(/tier\d+\s*/,'')}</span>`});
+
+  return`<div class="card tier-${tier}">
+<div class="card-top">
+  <div class="score score-${tier[0]}"><svg viewBox="0 0 42 42"><circle class="ring-bg" cx="21" cy="21" r="18"/><circle class="ring-fg" cx="21" cy="21" r="18" stroke-dasharray="${C}" stroke-dashoffset="${off}"/></svg>${sc}</div>
+  <div class="card-head">
+    <a class="card-title" href="${escA(j.url||'#')}" target="_blank" rel="noopener">${esc(j.title)}</a>
+    <div class="company-row">${fl?`<span class="flag">${fl}</span>`:''}<span>${esc(j.company)}</span>${o?`<span class="origin-label">${esc(o)}</span>`:''}</div>
+  </div>
+</div>
+<div class="card-meta">
+  <span class="mi"><svg class="mi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>${esc(j.location)}</span>
+  ${j.experience_level?`<span class="mi"><svg class="mi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>${esc(j.experience_level)}</span>`:''}
+  ${pd?`<span class="mi" data-tip="${pdTip}"><svg class="mi-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>${pd}</span>`:''}
+</div>
+<div class="card-meta">${sal}</div>
+<div class="badges">${bd}</div>
+${desc?`<div class="card-desc"><div class="desc-clamp" id="d-${j.id}">${desc}</div>${desc.length>200?`<button class="more-btn" onclick="toggleD('${j.id}')">Read more</button>`:''}</div>`:''}
+<div class="card-foot">
+  <span class="foot-text">${fp.join(' · ')}</span>
+  ${j.url?`<a class="apply" href="${escA(j.url)}" target="_blank" rel="noopener">Apply<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>`:''}
+</div>
+</div>`}
+
+function toggleD(id){const e=document.getElementById('d-'+id);if(!e)return;const b=e.nextElementSibling;e.classList.toggle('open');if(b)b.textContent=e.classList.contains('open')?'Show less':'Read more'}
+
+/* THEME */
+function applyTheme(){
+  const s=localStorage.getItem('gjr-theme');
+  if(s)document.documentElement.setAttribute('data-theme',s);
+  updIcon();
+}
+function flipTheme(){
+  const cur=document.documentElement.getAttribute('data-theme');
+  const dark=cur==='dark'||(!cur&&matchMedia('(prefers-color-scheme:dark)').matches);
+  const next=dark?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  localStorage.setItem('gjr-theme',next);
+  updIcon();
+}
+function updIcon(){
+  const t=document.documentElement.getAttribute('data-theme');
+  const dark=t==='dark'||(!t&&matchMedia('(prefers-color-scheme:dark)').matches);
+  document.getElementById('themeIcon').setAttribute('d',dark
+    ?'M8 1a7 7 0 1 0 0 14 5.5 5.5 0 0 1 0-11V1z'
+    :'M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-8V1m0 14v-2m7-3h-2M3 8H1m12.07-4.07l-1.42 1.42M4.35 11.65l-1.42 1.42m0-10.14l1.42 1.42m7.3 7.3l1.42 1.42');
+}
+
+/* REFRESH / WORKFLOW DISPATCH */
+const REPO='decentralizedRK/global-job-radar';
+const WORKFLOWS=['job_search.yml','company_monitor.yml'];
+
+function toast(msg,type,ms){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.className='refresh-toast '+type;
+  requestAnimationFrame(()=>t.classList.add('show'));
+  setTimeout(()=>t.classList.remove('show'),ms||4000);
+}
+
+function triggerRefresh(){
+  const pat=getPat();
+  if(!pat){document.getElementById('patModal').style.display='';return}
+  runWorkflows(pat);
+}
+
+function getPat(){try{return localStorage.getItem('gjr-pat')||''}catch(e){return''}}
+
+function closePatModal(){document.getElementById('patModal').style.display='none'}
+function savePat(){
+  const v=document.getElementById('patInput').value.trim();
+  if(!v){toast('Token is required','err');return}
+  try{localStorage.setItem('gjr-pat',v)}catch(e){}
+  document.getElementById('patInput').value='';
+  closePatModal();
+  runWorkflows(v);
+}
+
+async function runWorkflows(pat){
+  const btn=document.getElementById('refreshBtn');
+  const label=document.getElementById('refreshLabel');
+  btn.classList.add('running');
+  label.textContent='Running…';
+
+  let ok=0,fail=0;
+  for(const wf of WORKFLOWS){
+    try{
+      const r=await fetch(`https://api.github.com/repos/${REPO}/actions/workflows/${wf}/dispatches`,{
+        method:'POST',
+        headers:{'Authorization':`Bearer ${pat}`,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'},
+        body:JSON.stringify({ref:'main'})
+      });
+      if(r.status===204)ok++;
+      else if(r.status===401||r.status===403){
+        try{localStorage.removeItem('gjr-pat')}catch(e){}
+        toast('Token invalid or expired — click Refresh to re-enter','err',5000);
+        btn.classList.remove('running');label.textContent='Refresh';return;
+      }else fail++;
+    }catch(e){fail++}
+  }
+  btn.classList.remove('running');label.textContent='Refresh';
+  if(ok===WORKFLOWS.length)toast(`Triggered ${ok} workflows — data updates in ~15–20 min`,'ok',6000);
+  else if(ok)toast(`${ok} triggered, ${fail} failed`,'info',5000);
+  else toast('Failed to trigger workflows','err',5000);
+}
+
+boot();
+</script>
+</body>
+</html>

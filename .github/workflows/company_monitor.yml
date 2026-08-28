@@ -29,37 +29,47 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Monitor company careers pages
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd scripts
-          python main.py --sources careers --no-notify
+          python main.py --sources careers
 
       - name: Check for new positions
         id: check_new
         run: |
-          cd scripts
-          python3 -c "
-          import json
+          python3 << 'PYEOF'
+          import json, os
           from pathlib import Path
 
-          results_file = Path('../results/all_results.json')
+          results_file = Path('results/all_results.json')
+          gh_output = os.environ.get('GITHUB_OUTPUT', '')
+
           if not results_file.exists():
-              print('new_count=0')
+              if gh_output:
+                  with open(gh_output, 'a') as f:
+                      f.write('new_count=0\n')
               exit()
 
           with open(results_file) as f:
               data = json.load(f)
 
           new_jobs = [j for j in data['jobs'].values()
-                      if j.get('source') == 'careers_page'
+                      if j.get('source') in ('careers_page', 'google_company_search')
                       and j.get('seen_count', 0) <= 1]
 
-          print(f'new_count={len(new_jobs)}')
+          if gh_output:
+              with open(gh_output, 'a') as f:
+                  f.write(f'new_count={len(new_jobs)}\n')
 
           if new_jobs:
-              print('## New Positions from Target Companies')
+              print(f'Found {len(new_jobs)} new positions from target companies:')
               for job in sorted(new_jobs, key=lambda x: x.get('match_score', 0), reverse=True):
-                  print(f'- **{job[\"title\"]}** at {job[\"company\"]} (Score: {job.get(\"match_score\", 0)})')
-          " >> "$GITHUB_OUTPUT"
+                  print(f'  - {job["title"]} at {job["company"]} (Score: {job.get("match_score", 0)})')
+          else:
+              print('No new positions found this run')
+          PYEOF
 
       - name: Commit results
         run: |
