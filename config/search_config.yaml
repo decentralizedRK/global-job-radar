@@ -14,6 +14,12 @@ search_profiles:
       - "Engagement Manager"
       - "Client Partner"
       - "Expat Manager"
+      - "AI Program Manager"
+      - "AI Technical Program Manager"
+      - "ML Program Manager"
+      - "GenAI Program Manager"
+      - "AI/ML Program Manager"
+      - "AI Delivery Manager"
 
     location_keywords:
       - "India"
@@ -27,6 +33,12 @@ search_profiles:
       - "Chennai"
       - "Noida"
       - "Delhi NCR"
+      - "Remote"
+      - "Work from Home"
+      - "WFH"
+      - "Anywhere"
+      - "Remote - India"
+      - "Hybrid"
 
     company_origin:
       - "Japan"
@@ -431,6 +443,16 @@ search_queries:
     - "global delivery manager India"
     - "program director India technology"
     - "TPM senior India remote"
+    # AI/ML focused
+    - "AI program manager India"
+    - "AI technical program manager India remote"
+    - "ML program manager India"
+    - "GenAI program manager India"
+    - "AI delivery manager MNC India"
+    # Remote jobs
+    - "technical program manager remote India"
+    - "program manager remote work from home India"
+    - "TPM remote India MNC"
 
   indeed:
     - "program manager Japanese company India"
@@ -439,6 +461,9 @@ search_queries:
     - "senior program manager India"
     - "technical program manager MNC India"
     - "engineering program manager Bangalore Mumbai"
+    - "AI program manager India"
+    - "AI technical program manager remote"
+    - "program manager remote India"
 
   naukri:
     - "program manager Japanese company"
@@ -448,10 +473,43 @@ search_queries:
     - "program manager MNC 1 crore"
     - "engineering program manager senior"
     - "global delivery manager"
+    - "AI program manager"
+    - "AI technical program manager"
+    - "program manager remote work from home"
 
   glassdoor:
     - "program manager Japanese company India"
     - "technical program manager India senior"
+    - "AI program manager India"
+    - "AI program manager remote"
+    - "senior TPM India MNC"
+
+  wellfound:
+    - "technical program manager"
+    - "AI program manager"
+    - "ML program manager"
+    - "program manager remote India"
+    - "engineering program manager startup"
+    - "senior program manager AI ML"
+
+  builtin:
+    - "AI program manager"
+    - "technical program manager AI"
+    - "ML program manager"
+    - "GenAI program manager"
+    - "program manager remote"
+    - "engineering program manager"
+
+  google_jobs:
+    - "technical program manager India"
+    - "AI program manager India"
+    - "AI technical program manager remote India"
+    - "senior program manager MNC India"
+    - "ML program manager India"
+    - "GenAI program manager"
+    - "program manager Japanese company India"
+    - "TPM remote India"
+    - "engineering program manager Bangalore"
 
 filters:
   min_company_rating: 3.5
@@ -478,6 +536,12 @@ filters:
     - "senior"
     - "director"
     - "MNC"
+    - "AI"
+    - "artificial intelligence"
+    - "machine learning"
+    - "ML"
+    - "GenAI"
+    - "remote"
 
 notifications:
   email:
@@ -486,6 +550,8 @@ notifications:
   slack:
     enabled: false
     webhook_url: ""
+  telegram:
+    enabled: true
   github_issues:
     enabled: true
     labels: ["job-match", "auto-found"]

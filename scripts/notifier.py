@@ -117,6 +117,70 @@ def send_slack_notification(matches: List[dict], config: dict):
         logger.warning(f"Slack notification failed: {e}")
 
 
+def send_telegram_notification(matches: List[dict], config: dict):
+    if not config.get("notifications", {}).get("telegram", {}).get("enabled", False):
+        return
+
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not bot_token or not chat_id:
+        logger.warning("Telegram bot token or chat ID not configured")
+        return
+
+    import requests
+    from html import escape
+
+    lines = [
+        f"<b>New Job Matches - {datetime.utcnow().strftime('%Y-%m-%d')}</b>",
+        f"Found <b>{len(matches)}</b> matching positions",
+        "",
+    ]
+
+    for i, job in enumerate(matches[:10], 1):
+        score = job.get("match_score", 0)
+        title = escape(job["title"])
+        company = escape(job["company"])
+        location = escape(job["location"])
+        url = job.get("url", "")
+        expat = " [EXPAT]" if job.get("is_expat_role") else ""
+        remote = " [REMOTE]" if _is_remote(job) else ""
+
+        lines.append(f"{i}. <b>{title}</b>{expat}{remote}")
+        lines.append(f"   {company} | {location} | Score: {score}/100")
+        if url:
+            lines.append(f'   <a href="{escape(url)}">Apply</a>')
+        lines.append("")
+
+    if len(matches) > 10:
+        lines.append(f"<i>...and {len(matches) - 10} more matches</i>")
+
+    text = "\n".join(lines)
+    if len(text) > 4096:
+        text = text[:4090] + "..."
+
+    api_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML",
+        "disable_web_page_preview": True,
+    }
+
+    try:
+        resp = requests.post(api_url, json=payload, timeout=10)
+        resp.raise_for_status()
+        logger.info("Telegram notification sent")
+    except Exception as e:
+        logger.warning(f"Telegram notification failed: {e}")
+
+
+def _is_remote(job: dict) -> bool:
+    location = job.get("location", "").lower()
+    title = job.get("title", "").lower()
+    combined = f"{location} {title}"
+    return any(kw in combined for kw in ["remote", "work from home", "wfh", "anywhere"])
+
+
 def generate_markdown_report(matches: List[dict], metadata: dict) -> str:
     lines = [
         f"# Job Search Report - {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}",
@@ -181,4 +245,5 @@ def notify_all(matches: List[dict], metadata: dict, config: dict):
     generate_markdown_report(matches, metadata)
     create_github_issue(matches, config)
     send_slack_notification(matches, config)
+    send_telegram_notification(matches, config)
     logger.info("All notifications sent")

@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       sources:
-        description: 'Sources to search (comma-separated: linkedin,indeed,naukri,careers)'
+        description: 'Sources to search (comma-separated: linkedin,indeed,naukri,careers,glassdoor,wellfound,builtin,google_jobs)'
         required: false
-        default: 'linkedin,indeed,naukri,careers'
+        default: 'linkedin,indeed,naukri,careers,glassdoor,wellfound,builtin,google_jobs'
       notify:
         description: 'Send notifications'
         required: false
@@ -24,7 +24,7 @@ permissions:
 jobs:
   search:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -42,6 +42,8 @@ jobs:
       - name: Run job search
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd scripts
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then

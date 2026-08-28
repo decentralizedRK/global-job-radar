@@ -2,14 +2,14 @@
 
 Automated job search pipeline targeting **Tech Program Manager / Delivery Manager roles at global MNCs with India operations** — with **priority scoring for Japanese companies** and expat/cross-border roles offering 1 Cr+ INR compensation.
 
-Runs on **GitHub Actions** on a schedule, scrapes multiple job boards, scores matches by company tier, deduplicates, and notifies via GitHub Issues / Slack. Hosted on **Radicle** (decentralized git).
+Runs on **GitHub Actions** on a schedule, scrapes multiple job boards, scores matches by company tier, deduplicates, and notifies via GitHub Issues / Slack / Telegram.
 
 ## What It Searches For
 
-- **Roles:** Tech Program Manager, Engineering Program Manager, Delivery Manager, Program Director, Engagement Manager, Expat Manager, Client Partner
+- **Roles:** Tech Program Manager, Engineering Program Manager, AI/ML Program Manager, GenAI Program Manager, Delivery Manager, Program Director, Engagement Manager, Expat Manager, Client Partner
 - **Companies:** 80+ global companies across 4 priority tiers
-- **Location:** Bangalore, Mumbai, Hyderabad, Pune, Delhi NCR, Chennai
-- **Signals:** Expat assignments, cross-border roles, global mobility, relocation packages, seniority, compensation
+- **Location:** Bangalore, Mumbai, Hyderabad, Pune, Delhi NCR, Chennai, Remote/WFH
+- **Signals:** Expat assignments, cross-border roles, global mobility, relocation packages, seniority, compensation, AI/ML focus
 
 ## Company Tiers
 
@@ -40,7 +40,13 @@ Runs on **GitHub Actions** on a schedule, scrapes multiple job boards, scores ma
 │  In  ││      ││      ││ Pages   │
 └──┬───┘└──┬───┘└──┬───┘└────┬────┘
    │       │       │         │
-   └───────┴───────┴─────────┘
+┌──┴───┐┌──┴───┐┌──┴──────┐┌─┴──────┐
+│Glass ││Well- ││BuiltIn  ││Google  │
+│door  ││found ││         ││Jobs +  │
+│      ││      ││         ││Aggr.   │
+└──┬───┘└──┬───┘└────┬────┘└───┬────┘
+   │       │         │         │
+   └───────┴─────────┴─────────┘
            │
            ▼
    ┌───────────────┐
@@ -51,11 +57,12 @@ Runs on **GitHub Actions** on a schedule, scrapes multiple job boards, scores ma
            │
            ▼
    ┌───────────────┐
-   │  Notify:       │
-   │  - GH Issues   │
-   │  - Slack        │
-   │  - MD Report    │
-   └───────────────┘
+   │  Notify:        │
+   │  - GH Issues    │
+   │  - Telegram     │
+   │  - Slack         │
+   │  - MD Report     │
+   └────────────────┘
 ```
 
 ## Setup
@@ -82,6 +89,8 @@ Edit [config/search_config.yaml](config/search_config.yaml) to customize:
 | Secret | Purpose |
 |--------|---------|
 | `SLACK_WEBHOOK_URL` | Slack incoming webhook for notifications |
+| `TELEGRAM_BOT_TOKEN` | Telegram bot token from [@BotFather](https://t.me/BotFather) |
+| `TELEGRAM_CHAT_ID` | Telegram chat/group ID for notifications |
 
 ### 4. Enable GitHub Actions
 
@@ -94,10 +103,24 @@ Trigger manually from the Actions tab anytime.
 ## Local Run
 
 ```bash
-cd scripts && python main.py              # all sources
-python main.py --sources linkedin naukri   # specific sources
-python main.py --no-notify                 # skip notifications
+cd scripts && python main.py                              # all 8 sources
+python main.py --sources linkedin naukri glassdoor         # specific sources
+python main.py --sources builtin wellfound google_jobs     # AI/startup focused
+python main.py --no-notify                                 # skip notifications
 ```
+
+### Sources
+
+| Source | Type | Coverage |
+|--------|------|----------|
+| **LinkedIn** | Traditional | Public listings + Google X-Ray |
+| **Indeed** | Traditional | India job listings |
+| **Naukri** | India-focused | Primary India board |
+| **Glassdoor** | Traditional | Listings via Google X-Ray |
+| **Wellfound** | Startup/Tech | AngelList Talent, startup roles |
+| **BuiltIn** | Tech/AI | Tech & AI-focused listings |
+| **Google Jobs** | Meta-aggregator | Aggregates SimplyHired, ZipRecruiter, Monster, Shine, Foundit, Instahyre, Hirist, CutShort, RemoteOK, WeWorkRemotely, FlexJobs, AI-Jobs.net, Toptal, Turing |
+| **Careers** | Direct | 80+ company career pages |
 
 ## Match Scoring (0–100)
 
@@ -120,10 +143,6 @@ python main.py --no-notify                 # skip notifications
 - `results/all_results.json` — Full historical database
 - `results/REPORT.md` — Human-readable markdown report
 - GitHub Issues — Auto-created for new high-score matches
-
-## Decentralized Hosting
-
-This repo is hosted on [Radicle](https://radicle.xyz) — a peer-to-peer, sovereign code forge. Clone via Radicle or the seed node.
 
 ## Limitations
 

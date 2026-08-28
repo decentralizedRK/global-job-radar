@@ -15,6 +15,10 @@ from scraper_linkedin import run_linkedin_search
 from scraper_indeed import run_indeed_search
 from scraper_naukri import run_naukri_search
 from scraper_careers import run_careers_search
+from scraper_glassdoor import run_glassdoor_search
+from scraper_wellfound import run_wellfound_search
+from scraper_builtin import run_builtin_search
+from scraper_google_jobs import run_google_jobs_search
 from results_tracker import (
     deduplicate_jobs,
     filter_jobs,
@@ -31,48 +35,39 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+SCRAPERS = {
+    "linkedin": ("LinkedIn", run_linkedin_search),
+    "indeed": ("Indeed", run_indeed_search),
+    "naukri": ("Naukri", run_naukri_search),
+    "careers": ("Company Career Pages", run_careers_search),
+    "glassdoor": ("Glassdoor", run_glassdoor_search),
+    "wellfound": ("Wellfound", run_wellfound_search),
+    "builtin": ("BuiltIn", run_builtin_search),
+    "google_jobs": ("Google Jobs + Aggregators", run_google_jobs_search),
+}
+
+ALL_SOURCES = list(SCRAPERS.keys())
+
+
 def run_search(sources=None, notify=True):
     config = load_config()
-    all_sources = sources or ["linkedin", "indeed", "naukri", "careers"]
+    active_sources = sources or ALL_SOURCES
     all_jobs = []
 
-    logger.info(f"Starting job search across: {', '.join(all_sources)}")
+    logger.info(f"Starting job search across: {', '.join(active_sources)}")
 
-    if "linkedin" in all_sources:
-        logger.info("--- Searching LinkedIn ---")
+    for source_key in active_sources:
+        if source_key not in SCRAPERS:
+            logger.warning(f"Unknown source: {source_key}, skipping")
+            continue
+        label, search_fn = SCRAPERS[source_key]
+        logger.info(f"--- Searching {label} ---")
         try:
-            jobs = run_linkedin_search(config)
+            jobs = search_fn(config)
             all_jobs.extend(jobs)
-            logger.info(f"LinkedIn: {len(jobs)} results")
+            logger.info(f"{label}: {len(jobs)} results")
         except Exception as e:
-            logger.error(f"LinkedIn search failed: {e}")
-
-    if "indeed" in all_sources:
-        logger.info("--- Searching Indeed ---")
-        try:
-            jobs = run_indeed_search(config)
-            all_jobs.extend(jobs)
-            logger.info(f"Indeed: {len(jobs)} results")
-        except Exception as e:
-            logger.error(f"Indeed search failed: {e}")
-
-    if "naukri" in all_sources:
-        logger.info("--- Searching Naukri ---")
-        try:
-            jobs = run_naukri_search(config)
-            all_jobs.extend(jobs)
-            logger.info(f"Naukri: {len(jobs)} results")
-        except Exception as e:
-            logger.error(f"Naukri search failed: {e}")
-
-    if "careers" in all_sources:
-        logger.info("--- Searching Company Career Pages ---")
-        try:
-            jobs = run_careers_search(config)
-            all_jobs.extend(jobs)
-            logger.info(f"Careers: {len(jobs)} results")
-        except Exception as e:
-            logger.error(f"Careers search failed: {e}")
+            logger.error(f"{label} search failed: {e}")
 
     logger.info(f"Total raw results: {len(all_jobs)}")
 
@@ -101,11 +96,11 @@ def run_search(sources=None, notify=True):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Automated Job Search for Japanese Company Roles in India")
+    parser = argparse.ArgumentParser(description="Automated Job Search for TPM/AI PM Roles at Global MNCs")
     parser.add_argument(
         "--sources",
         nargs="+",
-        choices=["linkedin", "indeed", "naukri", "careers"],
+        choices=ALL_SOURCES,
         default=None,
         help="Which sources to search (default: all)",
     )
