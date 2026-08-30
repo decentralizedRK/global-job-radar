@@ -549,7 +549,7 @@ expat_network:
   target_tiers:
     - "tier1_japanese_priority"
     - "tier2_us_global_tech"
-  max_companies: 30
+  max_companies: 15
   target_origins:
     - "Japan"
     - "US"

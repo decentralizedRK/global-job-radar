@@ -8,6 +8,7 @@ Targets expats on assignment and professionals at MNC offices.
 import hashlib
 import json
 import logging
+import random
 import re
 import time
 import urllib.parse
@@ -70,50 +71,59 @@ def build_xray_query(company: str, origin: str, location: str = "Bangalore") -> 
     return queries
 
 
-def google_xray_search(query: str, num: int = 15) -> List[dict]:
+def google_xray_search(query: str, num: int = 15, max_retries: int = 3) -> List[dict]:
     profiles = []
     url = f"https://www.google.com/search?q={urllib.parse.quote(query)}&num={num}"
     logger.info(f"X-Ray: {query[:80]}...")
 
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=30)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-
-        for result in soup.find_all("div", class_="g"):
-            link_el = result.find("a")
-            title_el = result.find("h3")
-            snippet_el = result.find("div", class_=re.compile(r"VwiC3b|IsZvec"))
-            if not snippet_el:
-                snippet_el = result.find("span")
-
-            if not link_el or not title_el:
+    for attempt in range(max_retries):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=30)
+            if resp.status_code == 429:
+                wait = 30 * (2 ** attempt) + random.uniform(5, 15)
+                logger.warning(f"Rate limited (429), waiting {wait:.0f}s (attempt {attempt+1}/{max_retries})")
+                time.sleep(wait)
                 continue
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
 
-            href = link_el.get("href", "")
-            if "linkedin.com/in/" not in href:
-                continue
+            for result in soup.find_all("div", class_="g"):
+                link_el = result.find("a")
+                title_el = result.find("h3")
+                snippet_el = result.find("div", class_=re.compile(r"VwiC3b|IsZvec"))
+                if not snippet_el:
+                    snippet_el = result.find("span")
 
-            raw_title = title_el.get_text(strip=True)
-            snippet = snippet_el.get_text(strip=True) if snippet_el else ""
+                if not link_el or not title_el:
+                    continue
 
-            name, headline = parse_linkedin_title(raw_title)
-            if not name:
-                continue
+                href = link_el.get("href", "")
+                if "linkedin.com/in/" not in href:
+                    continue
 
-            profile_url = href.split("?")[0]
-            pid = hashlib.sha256(profile_url.encode()).hexdigest()[:12]
+                raw_title = title_el.get_text(strip=True)
+                snippet = snippet_el.get_text(strip=True) if snippet_el else ""
 
-            profiles.append({
-                "id": pid,
-                "name": name,
-                "headline": headline,
-                "snippet": snippet,
-                "linkedin_url": profile_url,
-            })
+                name, headline = parse_linkedin_title(raw_title)
+                if not name:
+                    continue
 
-    except requests.RequestException as e:
-        logger.warning(f"Google X-Ray failed: {e}")
+                profile_url = href.split("?")[0]
+                pid = hashlib.sha256(profile_url.encode()).hexdigest()[:12]
+
+                profiles.append({
+                    "id": pid,
+                    "name": name,
+                    "headline": headline,
+                    "snippet": snippet,
+                    "linkedin_url": profile_url,
+                })
+            break
+
+        except requests.RequestException as e:
+            logger.warning(f"Google X-Ray failed: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(15 * (attempt + 1))
 
     return profiles
 
@@ -209,9 +219,9 @@ def find_expat_profiles(config: dict) -> List[dict]:
                     all_profiles[profile["id"]] = profile
                 elif profile["relevance_score"] > all_profiles[profile["id"]]["relevance_score"]:
                     all_profiles[profile["id"]] = profile
-            time.sleep(4)
+            time.sleep(random.uniform(12, 20))
 
-        time.sleep(2)
+        time.sleep(random.uniform(8, 15))
 
     profiles = list(all_profiles.values())
     profiles.sort(key=lambda p: p["relevance_score"], reverse=True)
