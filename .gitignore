@@ -25,3 +25,4 @@ results/REPORT.md
 results/weekly_summary.md
 !results/.gitkeep
 !results/latest_matches.json
+!results/expat_profiles.json

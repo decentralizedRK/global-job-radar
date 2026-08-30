@@ -734,6 +734,147 @@ body {
 }
 .state-p { font-size: 13.5px; max-width: 360px; margin: 0 auto; }
 
+/* === TABS === */
+.tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--input);
+  border-radius: var(--radius-s);
+  padding: 3px;
+  width: fit-content;
+  margin-bottom: 18px;
+}
+.tab {
+  padding: 7px 18px;
+  border-radius: 4px;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-3);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all var(--ease);
+  white-space: nowrap;
+}
+.tab:hover { color: var(--text-2); }
+.tab.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-s); }
+.tab-badge {
+  display: inline-block;
+  background: var(--signal-wash);
+  color: var(--signal);
+  border-radius: var(--radius-pill);
+  padding: 0 6px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 5px;
+  vertical-align: 1px;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* === PROFILES === */
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.p-card {
+  background: var(--raised);
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: border-color var(--ease), box-shadow var(--ease);
+}
+.p-card:hover { border-color: var(--signal); box-shadow: var(--shadow); }
+.p-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--signal-wash);
+  color: var(--signal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.p-body { flex: 1; min-width: 0; }
+.p-name {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--signal);
+  text-decoration: none;
+  transition: color var(--ease);
+}
+.p-name:hover { color: var(--signal-hover); text-decoration: underline; }
+.p-headline {
+  font-size: 12.5px;
+  color: var(--text-2);
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+.p-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+}
+.p-tag {
+  display: inline-flex;
+  padding: 1px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.p-tag.expat { background: var(--strong-bg); color: var(--strong); }
+.p-tag.senior { background: var(--caution-bg); color: var(--caution); }
+.p-tag.jp { background: #fce8e8; color: #b83030; }
+.p-tag.us { background: #dce6fb; color: #1a4db8; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .p-tag.jp { background: #301818; color: #f08080; }
+  :root:not([data-theme="light"]) .p-tag.us { background: #1a2844; color: #7aabf7; }
+}
+:root[data-theme="dark"] .p-tag.jp { background: #301818; color: #f08080; }
+:root[data-theme="dark"] .p-tag.us { background: #1a2844; color: #7aabf7; }
+.p-company {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 4px;
+}
+.p-score {
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-3);
+  flex-shrink: 0;
+  align-self: center;
+}
+.profiles-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.profiles-stats {
+  font-size: 12.5px;
+  color: var(--text-3);
+  margin-bottom: 12px;
+}
+
 /* === FOOTER === */
 .footer {
   text-align: center;
@@ -835,10 +976,34 @@ body {
 
 <div class="main-area">
   <div class="wrap">
-    <div id="loading" class="state"><div class="spinner"></div><div class="state-h">Loading jobs…</div><div class="state-p">Fetching latest matches from the radar pipeline</div></div>
-    <div id="error" class="state" style="display:none"></div>
-    <div id="empty" class="state" style="display:none"><div class="state-icon">🔍</div><div class="state-h">No matches</div><div class="state-p">Adjust your filters or search to see results</div></div>
-    <div class="grid" id="grid"></div>
+    <div class="tabs" id="mainTabs">
+      <button class="tab active" data-tab="jobs" onclick="switchTab('jobs')">Jobs<span class="tab-badge" id="jobsTabCount">—</span></button>
+      <button class="tab" data-tab="network" onclick="switchTab('network')">Expat Network<span class="tab-badge" id="networkTabCount">—</span></button>
+    </div>
+
+    <div class="tab-panel active" id="panel-jobs">
+      <div id="loading" class="state"><div class="spinner"></div><div class="state-h">Loading jobs…</div><div class="state-p">Fetching latest matches from the radar pipeline</div></div>
+      <div id="error" class="state" style="display:none"></div>
+      <div id="empty" class="state" style="display:none"><div class="state-icon">🔍</div><div class="state-h">No matches</div><div class="state-p">Adjust your filters or search to see results</div></div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <div class="tab-panel" id="panel-network">
+      <div class="profiles-filter">
+        <div class="search-wrap" style="flex:1 1 240px">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="search-input" type="text" id="pq" placeholder="Search name, company, headline..." autocomplete="off">
+        </div>
+        <select class="sel" id="pOrigin"><option value="">All origins</option><option value="japan">Japan</option><option value="us">US</option></select>
+        <label class="toggle-label" id="pExpatTgl" onclick="flipPExpat()">
+          <span class="toggle-track"></span> Expats only
+        </label>
+      </div>
+      <div class="profiles-stats" id="pStats"></div>
+      <div id="pLoading" class="state" style="display:none"><div class="spinner"></div><div class="state-h">Loading profiles…</div></div>
+      <div id="pEmpty" class="state" style="display:none"><div class="state-icon">🤝</div><div class="state-h">No profiles yet</div><div class="state-p">Run the Expat Network Finder workflow to discover profiles, or click Refresh</div></div>
+      <div class="profiles-grid" id="pGrid"></div>
+    </div>
   </div>
 </div>
 
@@ -1047,7 +1212,7 @@ function updIcon(){
 
 /* REFRESH / WORKFLOW DISPATCH */
 const REPO='decentralizedRK/global-job-radar';
-const WORKFLOWS=['job_search.yml','company_monitor.yml'];
+const WORKFLOWS=['job_search.yml','company_monitor.yml','expat_finder.yml'];
 
 function toast(msg,type,ms){
   const t=document.getElementById('toast');
@@ -1097,10 +1262,94 @@ async function runWorkflows(pat){
     }catch(e){fail++}
   }
   btn.classList.remove('running');label.textContent='Refresh';
-  if(ok===WORKFLOWS.length)toast(`Triggered ${ok} workflows — data updates in ~15–20 min`,'ok',6000);
+  if(ok===WORKFLOWS.length)toast(`Triggered all ${ok} workflows — data updates in ~15–20 min`,'ok',6000);
   else if(ok)toast(`${ok} triggered, ${fail} failed`,'info',5000);
   else toast('Failed to trigger workflows','err',5000);
 }
+
+/* === TAB SWITCHING === */
+function switchTab(tab){
+  document.querySelectorAll('#mainTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+tab));
+  if(tab==='network'&&!profilesLoaded)loadProfiles();
+}
+
+/* === EXPAT NETWORK PROFILES === */
+let allProfiles=[],profilesLoaded=false,pExpat=false;
+
+function loadProfiles(){
+  const el=document.getElementById('pLoading');
+  el.style.display='';
+  fetch('./results/expat_profiles.json')
+    .then(r=>{if(!r.ok)throw new Error(r.status);return r.json()})
+    .then(d=>{
+      el.style.display='none';
+      allProfiles=d.profiles||[];
+      profilesLoaded=true;
+      document.getElementById('networkTabCount').textContent=allProfiles.length;
+      document.getElementById('pStats').textContent=
+        `${d.total_profiles||allProfiles.length} profiles tracked · ${d.expat_count||0} expats · ${d.companies_covered||0} companies`;
+      renderPOriginFilter();
+      listenProfiles();
+      renderProfiles();
+    })
+    .catch(()=>{
+      el.style.display='none';
+      document.getElementById('pEmpty').style.display='';
+    });
+}
+
+function renderPOriginFilter(){
+  const sel=document.getElementById('pOrigin');
+  const origins=[...new Set(allProfiles.map(p=>p.company_origin).filter(Boolean))].sort();
+  origins.forEach(o=>{
+    if([...sel.options].some(op=>op.value.toLowerCase()===o.toLowerCase()))return;
+    const opt=document.createElement('option');opt.value=o.toLowerCase();opt.textContent=o;sel.appendChild(opt);
+  });
+}
+
+function listenProfiles(){
+  const d=fn=>{let t;return()=>{clearTimeout(t);t=setTimeout(fn,180)}};
+  document.getElementById('pq').addEventListener('input',d(renderProfiles));
+  document.getElementById('pOrigin').addEventListener('change',renderProfiles);
+}
+
+function flipPExpat(){pExpat=!pExpat;document.getElementById('pExpatTgl').classList.toggle('on',pExpat);renderProfiles()}
+
+function renderProfiles(){
+  const q=document.getElementById('pq').value.toLowerCase().trim();
+  const ov=document.getElementById('pOrigin').value;
+  let f=allProfiles.filter(p=>{
+    if(q&&!`${p.name} ${p.company} ${p.headline} ${p.snippet}`.toLowerCase().includes(q))return false;
+    if(ov&&(p.company_origin||'').toLowerCase()!==ov)return false;
+    if(pExpat&&!p.is_expat)return false;
+    return true;
+  });
+  f.sort((a,b)=>(b.relevance_score||0)-(a.relevance_score||0));
+  const g=document.getElementById('pGrid');
+  const em=document.getElementById('pEmpty');
+  if(!f.length&&profilesLoaded){g.innerHTML='';em.style.display='';em.querySelector('.state-p').textContent='No profiles match your filters';return}
+  em.style.display='none';
+  g.innerHTML=f.map(profileCard).join('');
+}
+
+function profileCard(p){
+  const initials=(p.name||'?').split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+  const tags=(p.tags||[]).map(t=>{
+    const cls=t==='expat'?'expat':t==='senior'?'senior':t.includes('japanese')?'jp':t.includes('us')?'us':'';
+    return`<span class="p-tag ${cls}">${esc(t)}</span>`;
+  }).join('');
+  const score=p.relevance_score||0;
+  return`<div class="p-card">
+<div class="p-avatar">${initials}</div>
+<div class="p-body">
+  <a class="p-name" href="${escA(p.linkedin_url||'#')}" target="_blank" rel="noopener">${esc(p.name)}</a>
+  <div class="p-headline">${esc(p.headline)}</div>
+  <div class="p-meta">${tags}</div>
+  <div class="p-company">${esc(p.company)}${p.company_origin?' · '+esc(p.company_origin):''}</div>
+</div>
+<div class="p-score">${score}</div>
+</div>`}
 
 boot();
 </script>

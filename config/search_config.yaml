@@ -543,6 +543,17 @@ filters:
     - "GenAI"
     - "remote"
 
+expat_network:
+  enabled: true
+  location: "Bangalore"
+  target_tiers:
+    - "tier1_japanese_priority"
+    - "tier2_us_global_tech"
+  max_companies: 30
+  target_origins:
+    - "Japan"
+    - "US"
+
 notifications:
   email:
     enabled: false
