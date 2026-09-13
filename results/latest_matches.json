@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-12T15:56:29.872933",
-  "total_tracked": 365,
+  "generated_at": "2026-09-13T05:33:27.521566",
+  "total_tracked": 367,
   "top_matches_count": 50,
   "matches": [
     {
@@ -17,11 +17,11 @@
       "is_expat_role": false,
       "match_score": 75.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.380364",
+      "scraped_at": "2026-09-13T05:16:19.499754",
       "id": "4d6b2ce0cf150e24",
-      "first_seen": "2026-09-12T15:56:29.856531",
+      "first_seen": "2026-09-13T05:33:27.505604",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.856532"
+      "last_seen": "2026-09-13T05:33:27.505605"
     },
     {
       "title": "Senior Technical Program Manager, Cloud Silicon",
@@ -37,11 +37,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.551139",
+      "scraped_at": "2026-09-13T05:15:16.696226",
       "id": "867ddd42a3dac3e9",
-      "first_seen": "2026-09-12T15:56:29.848149",
+      "first_seen": "2026-09-13T05:33:27.498041",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848150"
+      "last_seen": "2026-09-13T05:33:27.498042"
     },
     {
       "title": "Principal Program Manager, ASIN Productivity",
@@ -57,11 +57,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.554712",
+      "scraped_at": "2026-09-13T05:15:16.699325",
       "id": "c6d6dcbe58ed38ce",
-      "first_seen": "2026-09-12T15:56:29.849245",
+      "first_seen": "2026-09-13T05:33:27.499170",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849246"
+      "last_seen": "2026-09-13T05:33:27.499171"
     },
     {
       "title": "Principal Technical Program Manager, Strategic programs, PRISM, Last Mile Delivery Tech",
@@ -77,11 +77,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.559460",
+      "scraped_at": "2026-09-13T05:15:25.664232",
       "id": "ada93ce19730361a",
-      "first_seen": "2026-09-12T15:56:29.850529",
+      "first_seen": "2026-09-13T05:33:27.500231",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850530"
+      "last_seen": "2026-09-13T05:33:27.500232"
     },
     {
       "title": "Senior Technical Program Manager",
@@ -97,11 +97,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:14.447205",
+      "scraped_at": "2026-09-13T05:15:34.613266",
       "id": "8509fb7e92867172",
-      "first_seen": "2026-09-12T15:56:29.852094",
+      "first_seen": "2026-09-13T05:33:27.501563",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852095"
+      "last_seen": "2026-09-13T05:33:27.501563"
     },
     {
       "title": "Senior Technical Program Manager",
@@ -117,11 +117,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:14.451417",
+      "scraped_at": "2026-09-13T05:15:52.556751",
       "id": "2d5ee51aeaedd48a",
-      "first_seen": "2026-09-12T15:56:29.852570",
+      "first_seen": "2026-09-13T05:33:27.503127",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852571"
+      "last_seen": "2026-09-13T05:33:27.503128"
     },
     {
       "title": "Senior Technical Program Manager, Google Data Centers",
@@ -137,11 +137,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.375782",
+      "scraped_at": "2026-09-13T05:16:19.495763",
       "id": "d88c891b08f0edc9",
-      "first_seen": "2026-09-12T15:56:29.855345",
+      "first_seen": "2026-09-13T05:33:27.504593",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855346"
+      "last_seen": "2026-09-13T05:33:27.504594"
     },
     {
       "title": "Senior Technical Program Manager, Amazon Music",
@@ -157,11 +157,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.380141",
+      "scraped_at": "2026-09-13T05:16:19.499563",
       "id": "f0773b5d52f837c3",
-      "first_seen": "2026-09-12T15:56:29.856485",
+      "first_seen": "2026-09-13T05:33:27.505562",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.856486"
+      "last_seen": "2026-09-13T05:33:27.505563"
     },
     {
       "title": "Senior Technical Program Manager, Relay Central (TTS)",
@@ -177,11 +177,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:40:08.354289",
+      "scraped_at": "2026-09-13T05:16:28.532156",
       "id": "ac49d42452bb3eab",
-      "first_seen": "2026-09-12T15:56:29.856720",
+      "first_seen": "2026-09-13T05:33:27.505735",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.856721"
+      "last_seen": "2026-09-13T05:33:27.505736"
     },
     {
       "title": "Senior Program Manager, Alexa Sensitive Content Intelligence (ASCI)",
@@ -197,11 +197,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:40:44.503401",
+      "scraped_at": "2026-09-13T05:17:04.314653",
       "id": "62c19b13458c1e21",
-      "first_seen": "2026-09-12T15:56:29.861427",
+      "first_seen": "2026-09-13T05:33:27.510152",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.861428"
+      "last_seen": "2026-09-13T05:33:27.510152"
     },
     {
       "title": "Meet Principal Technical Program Manager and Musician, MeravPrincipal Technical Program Manager Merav is responsible for everything related to the management of effective work processes in the development group -- and she is also a particularly talented musician and bassist!Wednesday, May 07, 2025CultureIsrael",
@@ -219,11 +219,11 @@
       "tags": [
         "tier2_us_global_tech"
       ],
-      "scraped_at": "2026-09-12T15:48:02.950635",
+      "scraped_at": "2026-09-13T05:24:26.354899",
       "id": "a92738e010cf3383",
-      "first_seen": "2026-09-12T15:56:29.865856",
+      "first_seen": "2026-09-13T05:33:27.514189",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.865857"
+      "last_seen": "2026-09-13T05:33:27.514190"
     },
     {
       "title": "ICT Project Director",
@@ -239,11 +239,11 @@
       "is_expat_role": false,
       "match_score": 63.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:32.392503",
+      "scraped_at": "2026-09-13T05:15:52.555706",
       "id": "6c160ed9a7323372",
-      "first_seen": "2026-09-12T15:56:29.853662",
+      "first_seen": "2026-09-13T05:33:27.503072",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.853663"
+      "last_seen": "2026-09-13T05:33:27.503073"
     },
     {
       "title": "Technical Program Manager, Cloud Silicon",
@@ -259,11 +259,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.551489",
+      "scraped_at": "2026-09-13T05:15:16.696618",
       "id": "4e6fe99fe8259a96",
-      "first_seen": "2026-09-12T15:56:29.848298",
+      "first_seen": "2026-09-13T05:33:27.498220",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848300"
+      "last_seen": "2026-09-13T05:33:27.498220"
     },
     {
       "title": "Technical Program Manager",
@@ -279,11 +279,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.555430",
+      "scraped_at": "2026-09-13T05:15:16.699966",
       "id": "c38b576f39f185cc",
-      "first_seen": "2026-09-12T15:56:29.849436",
+      "first_seen": "2026-09-13T05:33:27.499400",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849437"
+      "last_seen": "2026-09-13T05:33:27.499401"
     },
     {
       "title": "Program Manager, EMEA and JAPAC Contingent Workforce",
@@ -299,31 +299,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.555659",
+      "scraped_at": "2026-09-13T05:15:16.700150",
       "id": "402d357c3aa333eb",
-      "first_seen": "2026-09-12T15:56:29.849532",
+      "first_seen": "2026-09-13T05:33:27.499489",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849533"
-    },
-    {
-      "title": "Engineering Program Manager 5",
-      "company": "Adobe",
-      "location": "Noida, Uttar Pradesh, India",
-      "url": "https://in.linkedin.com/jobs/view/engineering-program-manager-5-at-adobe-4435235377",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-05",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 55.0,
-      "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.556486",
-      "id": "6c516b7192af502d",
-      "first_seen": "2026-09-12T15:56:29.849815",
-      "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849817"
+      "last_seen": "2026-09-13T05:33:27.499490"
     },
     {
       "title": "Sr. Technical Program Manager, AEE Expansions",
@@ -339,11 +319,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.556842",
+      "scraped_at": "2026-09-13T05:15:16.700977",
       "id": "84ef51c349df3ac5",
-      "first_seen": "2026-09-12T15:56:29.849966",
+      "first_seen": "2026-09-13T05:33:27.499798",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849967"
+      "last_seen": "2026-09-13T05:33:27.499799"
     },
     {
       "title": "Tech Infrastructure Program Manager, AWS Data Center Planning & Delivery",
@@ -359,11 +339,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.559347",
+      "scraped_at": "2026-09-13T05:15:25.664139",
       "id": "64389da2bd2c9128",
-      "first_seen": "2026-09-12T15:56:29.850482",
+      "first_seen": "2026-09-13T05:33:27.500189",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850483"
+      "last_seen": "2026-09-13T05:33:27.500190"
     },
     {
       "title": "Tech Infrastructure Program Manager, AWS Data Center Planning & Delivery",
@@ -379,11 +359,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.560619",
+      "scraped_at": "2026-09-13T05:15:25.665254",
       "id": "b529423bd5af566e",
-      "first_seen": "2026-09-12T15:56:29.850909",
+      "first_seen": "2026-09-13T05:33:27.500552",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850910"
+      "last_seen": "2026-09-13T05:33:27.500553"
     },
     {
       "title": "Sr Technical Program Manager, Tablet Product Software",
@@ -399,11 +379,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:14.445218",
+      "scraped_at": "2026-09-13T05:15:34.611656",
       "id": "57eed595c6895ffe",
-      "first_seen": "2026-09-12T15:56:29.851849",
+      "first_seen": "2026-09-13T05:33:27.501327",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.851850"
+      "last_seen": "2026-09-13T05:33:27.501328"
     },
     {
       "title": "Technical Program Manager - Product Operations",
@@ -419,11 +399,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:14.449580",
+      "scraped_at": "2026-09-13T05:15:34.615227",
       "id": "c5ae356baa77aafe",
-      "first_seen": "2026-09-12T15:56:29.852186",
+      "first_seen": "2026-09-13T05:33:27.501694",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852187"
+      "last_seen": "2026-09-13T05:33:27.501695"
     },
     {
       "title": "External Channels Program Manager, External Channel Ops & Program",
@@ -439,11 +419,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:23.438973",
+      "scraped_at": "2026-09-13T05:15:43.567424",
       "id": "44c4ce1e4feb12a9",
-      "first_seen": "2026-09-12T15:56:29.852616",
+      "first_seen": "2026-09-13T05:33:27.502105",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852617"
+      "last_seen": "2026-09-13T05:33:27.502106"
     },
     {
       "title": "Supply Chain Program Manager, Google Distributed Cloud",
@@ -459,11 +439,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:23.439096",
+      "scraped_at": "2026-09-13T05:15:43.567517",
       "id": "e83c80996b185324",
-      "first_seen": "2026-09-12T15:56:29.852662",
+      "first_seen": "2026-09-13T05:33:27.502149",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852663"
+      "last_seen": "2026-09-13T05:33:27.502150"
     },
     {
       "title": "Program Manager, CXQO, Just Walk Out Technology",
@@ -479,11 +459,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:23.440975",
+      "scraped_at": "2026-09-13T05:15:43.568995",
       "id": "6306c07efe263595",
-      "first_seen": "2026-09-12T15:56:29.852854",
+      "first_seen": "2026-09-13T05:33:27.502295",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852855"
+      "last_seen": "2026-09-13T05:33:27.502295"
     },
     {
       "title": "Program Manager, Supply chain, JWO",
@@ -499,11 +479,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:23.441089",
+      "scraped_at": "2026-09-13T05:15:43.569085",
       "id": "7c3cc9eb62308a95",
-      "first_seen": "2026-09-12T15:56:29.852900",
+      "first_seen": "2026-09-13T05:33:27.502337",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.852901"
+      "last_seen": "2026-09-13T05:33:27.502338"
     },
     {
       "title": "Sr. Technical Program Manager, RBS Tech - DIQ",
@@ -519,11 +499,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:50.379664",
+      "scraped_at": "2026-09-13T05:16:10.447933",
       "id": "750824724ae947df",
-      "first_seen": "2026-09-12T15:56:29.854640",
+      "first_seen": "2026-09-13T05:33:27.503966",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.854641"
+      "last_seen": "2026-09-13T05:33:27.503967"
     },
     {
       "title": "Sr. Program Manager - RBS Emerging Stores, Retail Business Services",
@@ -539,11 +519,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.374217",
+      "scraped_at": "2026-09-13T05:16:19.494477",
       "id": "baf2666a1674e289",
-      "first_seen": "2026-09-12T15:56:29.855023",
+      "first_seen": "2026-09-13T05:33:27.504286",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855024"
+      "last_seen": "2026-09-13T05:33:27.504287"
     },
     {
       "title": "Sr. Program Manager, RBS Returns Reduction",
@@ -559,11 +539,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.374351",
+      "scraped_at": "2026-09-13T05:16:19.494593",
       "id": "b98cd8761264e150",
-      "first_seen": "2026-09-12T15:56:29.855067",
+      "first_seen": "2026-09-13T05:33:27.504328",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855068"
+      "last_seen": "2026-09-13T05:33:27.504329"
     },
     {
       "title": "Sr. Program Manager, Abuse Prevention",
@@ -579,11 +559,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.374710",
+      "scraped_at": "2026-09-13T05:16:19.494896",
       "id": "4a0d6c267e097405",
-      "first_seen": "2026-09-12T15:56:29.855113",
+      "first_seen": "2026-09-13T05:33:27.504380",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855114"
+      "last_seen": "2026-09-13T05:33:27.504381"
     },
     {
       "title": "Sr Tech Infra Program Manager, DCPD",
@@ -599,11 +579,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.374964",
+      "scraped_at": "2026-09-13T05:16:19.494993",
       "id": "f0957ed31237dcfd",
-      "first_seen": "2026-09-12T15:56:29.855159",
+      "first_seen": "2026-09-13T05:33:27.504423",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855160"
+      "last_seen": "2026-09-13T05:33:27.504424"
     },
     {
       "title": "Sr. Program Manager, Cost of Returns",
@@ -619,11 +599,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.375196",
+      "scraped_at": "2026-09-13T05:16:19.495186",
       "id": "044a3e1c868539e2",
-      "first_seen": "2026-09-12T15:56:29.855206",
+      "first_seen": "2026-09-13T05:33:27.504464",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855207"
+      "last_seen": "2026-09-13T05:33:27.504465"
     },
     {
       "title": "Program Manager, AWS Developer Experience",
@@ -639,11 +619,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:59.375311",
+      "scraped_at": "2026-09-13T05:16:19.495282",
       "id": "d00a84d6b4a88b19",
-      "first_seen": "2026-09-12T15:56:29.855252",
+      "first_seen": "2026-09-13T05:33:27.504508",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.855253"
+      "last_seen": "2026-09-13T05:33:27.504509"
     },
     {
       "title": "Manager III, Program Manager, Seller Economics & Fees",
@@ -659,11 +639,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:40:17.406850",
+      "scraped_at": "2026-09-13T05:16:37.480616",
       "id": "21e5b8c87a967687",
-      "first_seen": "2026-09-12T15:56:29.857400",
+      "first_seen": "2026-09-13T05:33:27.506324",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.857401"
+      "last_seen": "2026-09-13T05:33:27.506325"
     },
     {
       "title": "Data/AI Director",
@@ -679,11 +659,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:40:26.539012",
+      "scraped_at": "2026-09-13T05:16:46.408650",
       "id": "46d1ff79190909a4",
-      "first_seen": "2026-09-12T15:56:29.860199",
+      "first_seen": "2026-09-13T05:33:27.509027",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.860200"
+      "last_seen": "2026-09-13T05:33:27.509028"
     },
     {
       "title": "Sr. Program Manager, ECR, NOC ECR",
@@ -699,11 +679,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:40:44.504262",
+      "scraped_at": "2026-09-13T05:17:04.315230",
       "id": "6d21e461ae60c455",
-      "first_seen": "2026-09-12T15:56:29.861567",
+      "first_seen": "2026-09-13T05:33:27.510283",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.861568"
+      "last_seen": "2026-09-13T05:33:27.510284"
     },
     {
       "title": "Sr. Program Manager, Translation Services Operations",
@@ -719,31 +699,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:41:12.226874",
+      "scraped_at": "2026-09-13T05:17:32.197270",
       "id": "997bda811703d161",
-      "first_seen": "2026-09-12T15:56:29.863669",
+      "first_seen": "2026-09-13T05:33:27.512216",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.863670"
-    },
-    {
-      "title": "Technical Program Manager, Risk",
-      "company": "Stripe",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://in.linkedin.com/jobs/view/technical-program-manager-risk-at-stripe-4454551288",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-06",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 55.0,
-      "tags": [],
-      "scraped_at": "2026-09-12T15:41:49.217656",
-      "id": "cdf70bcdf5161795",
-      "first_seen": "2026-09-12T15:56:29.865553",
-      "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.865555"
+      "last_seen": "2026-09-13T05:33:27.512217"
     },
     {
       "title": "Program Manager/Principal Manager, Program Management (DESIS Tech PMO)",
@@ -759,11 +719,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.550330",
+      "scraped_at": "2026-09-13T05:15:16.695634",
       "id": "97e1118e90df37d9",
-      "first_seen": "2026-09-12T15:56:29.847703",
+      "first_seen": "2026-09-13T05:33:27.497739",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.847706"
+      "last_seen": "2026-09-13T05:33:27.497740"
     },
     {
       "title": "Program Manager/Lead, Program Management (DESIS Tech PMO)",
@@ -779,11 +739,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.550706",
+      "scraped_at": "2026-09-13T05:15:16.695932",
       "id": "a012f08a7ad861b6",
-      "first_seen": "2026-09-12T15:56:29.847986",
+      "first_seen": "2026-09-13T05:33:27.497894",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.847988"
+      "last_seen": "2026-09-13T05:33:27.497895"
     },
     {
       "title": "Principal Program Manager, Enterprise AI Strategy & Governance",
@@ -799,11 +759,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.551258",
+      "scraped_at": "2026-09-13T05:15:16.696324",
       "id": "f542c814dc79fd95",
-      "first_seen": "2026-09-12T15:56:29.848201",
+      "first_seen": "2026-09-13T05:33:27.498088",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848202"
+      "last_seen": "2026-09-13T05:33:27.498089"
     },
     {
       "title": "Senior Program Manager – HIMS Implementation",
@@ -819,11 +779,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.552697",
+      "scraped_at": "2026-09-13T05:15:16.697592",
       "id": "ada59a7fddde114e",
-      "first_seen": "2026-09-12T15:56:29.848603",
+      "first_seen": "2026-09-13T05:33:27.498534",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848604"
+      "last_seen": "2026-09-13T05:33:27.498534"
     },
     {
       "title": "Senior Technical Program Manager - SW & HW",
@@ -839,11 +799,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.552952",
+      "scraped_at": "2026-09-13T05:15:16.697772",
       "id": "2118ebc7bec62e8e",
-      "first_seen": "2026-09-12T15:56:29.848702",
+      "first_seen": "2026-09-13T05:33:27.498627",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848703"
+      "last_seen": "2026-09-13T05:33:27.498628"
     },
     {
       "title": "Senior Program Manager",
@@ -859,11 +819,51 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.553308",
+      "scraped_at": "2026-09-13T05:15:16.698045",
       "id": "863a80d778781934",
-      "first_seen": "2026-09-12T15:56:29.848784",
+      "first_seen": "2026-09-13T05:33:27.498671",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.848786"
+      "last_seen": "2026-09-13T05:33:27.498672"
+    },
+    {
+      "title": "Senior Technical Program Manager",
+      "company": "NVIDIA",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-at-nvidia-4456281909",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-12",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-13T05:15:16.698874",
+      "id": "ba78ccca7219004e",
+      "first_seen": "2026-09-13T05:33:27.498936",
+      "seen_count": 1,
+      "last_seen": "2026-09-13T05:33:27.498936"
+    },
+    {
+      "title": "Senior Technical Program Manager",
+      "company": "NVIDIA",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-at-nvidia-4456295934",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-12",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-13T05:15:16.699517",
+      "id": "5fdbb4cd4794a5e8",
+      "first_seen": "2026-09-13T05:33:27.499259",
+      "seen_count": 1,
+      "last_seen": "2026-09-13T05:33:27.499259"
     },
     {
       "title": "Senior Sustainability & Stewardship Program Manager",
@@ -879,11 +879,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:38:56.555205",
+      "scraped_at": "2026-09-13T05:15:16.699787",
       "id": "961153f4a7a0dcc8",
-      "first_seen": "2026-09-12T15:56:29.849390",
+      "first_seen": "2026-09-13T05:33:27.499358",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.849391"
+      "last_seen": "2026-09-13T05:33:27.499359"
     },
     {
       "title": "Principal Technical Program Manager",
@@ -899,11 +899,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.557054",
+      "scraped_at": "2026-09-13T05:15:25.662405",
       "id": "08a9b5e1bf1ddccd",
-      "first_seen": "2026-09-12T15:56:29.850106",
+      "first_seen": "2026-09-13T05:33:27.499841",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850106"
+      "last_seen": "2026-09-13T05:33:27.499842"
     },
     {
       "title": "Program Director",
@@ -919,11 +919,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.558045",
+      "scraped_at": "2026-09-13T05:15:25.663190",
       "id": "0b4b6cb41945a284",
-      "first_seen": "2026-09-12T15:56:29.850201",
+      "first_seen": "2026-09-13T05:33:27.499928",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850202"
+      "last_seen": "2026-09-13T05:33:27.499929"
     },
     {
       "title": "Senior Staff Technical Program Manager",
@@ -939,11 +939,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.558162",
+      "scraped_at": "2026-09-13T05:15:25.663283",
       "id": "3c051205ecdb352e",
-      "first_seen": "2026-09-12T15:56:29.850249",
+      "first_seen": "2026-09-13T05:33:27.499971",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850250"
+      "last_seen": "2026-09-13T05:33:27.499972"
     },
     {
       "title": "Senior Technical Program Manager",
@@ -959,11 +959,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.560050",
+      "scraped_at": "2026-09-13T05:15:25.664798",
       "id": "7972425d70b1e11c",
-      "first_seen": "2026-09-12T15:56:29.850725",
+      "first_seen": "2026-09-13T05:33:27.500422",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850726"
+      "last_seen": "2026-09-13T05:33:27.500423"
     },
     {
       "title": "Technical Program Director",
@@ -979,11 +979,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.560395",
+      "scraped_at": "2026-09-13T05:15:25.665073",
       "id": "ca55e47e1040c158",
-      "first_seen": "2026-09-12T15:56:29.850811",
+      "first_seen": "2026-09-13T05:33:27.500466",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850813"
+      "last_seen": "2026-09-13T05:33:27.500467"
     },
     {
       "title": "Principal Technical Program Manager",
@@ -999,11 +999,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-12T15:39:05.560864",
+      "scraped_at": "2026-09-13T05:15:25.665447",
       "id": "d89440acd2fe386b",
-      "first_seen": "2026-09-12T15:56:29.850956",
+      "first_seen": "2026-09-13T05:33:27.500595",
       "seen_count": 1,
-      "last_seen": "2026-09-12T15:56:29.850957"
+      "last_seen": "2026-09-13T05:33:27.500596"
     }
   ]
 }
