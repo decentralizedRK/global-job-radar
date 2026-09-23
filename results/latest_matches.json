@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-23T05:21:13.920597",
-  "total_tracked": 373,
+  "generated_at": "2026-09-23T17:34:57.564173",
+  "total_tracked": 372,
   "top_matches_count": 50,
   "matches": [
     {
@@ -17,51 +17,31 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.978758",
+      "scraped_at": "2026-09-23T17:16:58.574568",
       "id": "8b0bdd2e1eecb8cb",
-      "first_seen": "2026-09-23T05:21:13.905972",
+      "first_seen": "2026-09-23T17:34:57.540315",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905973"
+      "last_seen": "2026-09-23T17:34:57.540316"
     },
     {
-      "title": "Principal Technical Program Manager",
-      "company": "Atlassian",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://in.linkedin.com/jobs/view/principal-technical-program-manager-at-atlassian-4467978736",
+      "title": "Senior Technical Program Manager",
+      "company": "Mastercard",
+      "location": "Pune Division, Maharashtra, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-at-mastercard-4469333704",
       "source": "linkedin",
       "description": "",
       "salary_text": "",
-      "posted_date": "2026-09-16",
+      "posted_date": "2026-09-23",
       "company_origin": "",
       "experience_level": "",
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.053483",
-      "id": "949923aa46f8b8f5",
-      "first_seen": "2026-09-23T05:21:13.906523",
+      "scraped_at": "2026-09-23T17:17:16.769009",
+      "id": "78b6c066a4e4bab7",
+      "first_seen": "2026-09-23T17:34:57.543221",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906524"
-    },
-    {
-      "title": "Senior Technical Program Manager, ShipTech",
-      "company": "Amazon",
-      "location": "Gurugram, Haryana, India",
-      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-shiptech-at-amazon-4467997404",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-16",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 65.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:59.057651",
-      "id": "e01bf541f81fc389",
-      "first_seen": "2026-09-23T05:21:13.907470",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907471"
+      "last_seen": "2026-09-23T17:34:57.543222"
     },
     {
       "title": "Senior Program Manager, RBS : Cost to Serve",
@@ -77,11 +57,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:08.162895",
+      "scraped_at": "2026-09-23T17:17:25.859032",
       "id": "2fb2d6619e36fe59",
-      "first_seen": "2026-09-23T05:21:13.907967",
+      "first_seen": "2026-09-23T17:34:57.543742",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907968"
+      "last_seen": "2026-09-23T17:34:57.543743"
     },
     {
       "title": "Senior Technical Program Manager, Google Cloud Business Platform",
@@ -97,31 +77,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:08.163405",
+      "scraped_at": "2026-09-23T17:17:25.859709",
       "id": "2c507455f0082862",
-      "first_seen": "2026-09-23T05:21:13.908048",
+      "first_seen": "2026-09-23T17:34:57.543834",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.908049"
-    },
-    {
-      "title": "Senior Technical Program Manager",
-      "company": "Mastercard",
-      "location": "Pune Division, Maharashtra, India",
-      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-at-mastercard-4468924937",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-22",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 65.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:03:17.218391",
-      "id": "f936013308777ce1",
-      "first_seen": "2026-09-23T05:21:13.908823",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.908824"
+      "last_seen": "2026-09-23T17:34:57.543834"
     },
     {
       "title": "Principal Technical Program Manager, Amazon Freight",
@@ -137,11 +97,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:35.329069",
+      "scraped_at": "2026-09-23T17:17:52.965426",
       "id": "eec658acfb6f395d",
-      "first_seen": "2026-09-23T05:21:13.909459",
+      "first_seen": "2026-09-23T17:34:57.546288",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.909460"
+      "last_seen": "2026-09-23T17:34:57.546289"
     },
     {
       "title": "Senior Program Manager, RBS : Cost to Serve",
@@ -157,11 +117,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:44.366632",
+      "scraped_at": "2026-09-23T17:18:02.085295",
       "id": "7820595a9d1b1c4c",
-      "first_seen": "2026-09-23T05:21:13.909754",
+      "first_seen": "2026-09-23T17:34:57.546713",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.909754"
+      "last_seen": "2026-09-23T17:34:57.546714"
     },
     {
       "title": "Senior Enterprise Delivery Manager, Migrations",
@@ -177,11 +137,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:02.547275",
+      "scraped_at": "2026-09-23T17:18:20.406786",
       "id": "1660160b42e60fa4",
-      "first_seen": "2026-09-23T05:21:13.910919",
+      "first_seen": "2026-09-23T17:34:57.548397",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.910920"
+      "last_seen": "2026-09-23T17:34:57.548398"
     },
     {
       "title": "Senior Technical Program Manager, Data Science",
@@ -197,11 +157,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:20.534964",
+      "scraped_at": "2026-09-23T17:18:48.164385",
       "id": "9374abd481bccb1d",
-      "first_seen": "2026-09-23T05:21:13.913326",
+      "first_seen": "2026-09-23T17:34:57.553311",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.913327"
+      "last_seen": "2026-09-23T17:34:57.553312"
     },
     {
       "title": "Senior Solution Architect / Delivery Manager",
@@ -217,11 +177,11 @@
       "is_expat_role": false,
       "match_score": 65.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:48.898641",
+      "scraped_at": "2026-09-23T17:18:48.167244",
       "id": "aff7c94750302231",
-      "first_seen": "2026-09-23T05:21:13.914947",
+      "first_seen": "2026-09-23T17:34:57.553932",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.914948"
+      "last_seen": "2026-09-23T17:34:57.553933"
     },
     {
       "title": "Meet Principal Technical Program Manager and Musician, MeravPrincipal Technical Program Manager Merav is responsible for everything related to the management of effective work processes in the development group -- and she is also a particularly talented musician and bassist!Wednesday, May 07, 2025CultureIsrael",
@@ -239,71 +199,11 @@
       "tags": [
         "tier2_us_global_tech"
       ],
-      "scraped_at": "2026-09-23T05:12:06.713378",
+      "scraped_at": "2026-09-23T17:26:19.921498",
       "id": "a92738e010cf3383",
-      "first_seen": "2026-09-23T05:21:13.916062",
+      "first_seen": "2026-09-23T17:34:57.557158",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.916063"
-    },
-    {
-      "title": "Principal Technical Program Manager",
-      "company": "Ericsson",
-      "location": "Greater Bengaluru Area",
-      "url": "https://in.linkedin.com/jobs/view/principal-technical-program-manager-at-ericsson-4467355942",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-21",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 63.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.980337",
-      "id": "54311fa0145336fc",
-      "first_seen": "2026-09-23T05:21:13.906468",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906469"
-    },
-    {
-      "title": "Principal Technical Program Manager",
-      "company": "Ericsson",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://in.linkedin.com/jobs/view/principal-technical-program-manager-at-ericsson-4468733159",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-21",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 63.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.055274",
-      "id": "57f74626d1e440f1",
-      "first_seen": "2026-09-23T05:21:13.906845",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906846"
-    },
-    {
-      "title": "Program Manager, Climate Operations",
-      "company": "Google",
-      "location": "Gurugram, Haryana, India",
-      "url": "https://in.linkedin.com/jobs/view/program-manager-climate-operations-at-google-4466853981",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-16",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 55.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.977870",
-      "id": "1b712129dc32c5f1",
-      "first_seen": "2026-09-23T05:21:13.905636",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905637"
+      "last_seen": "2026-09-23T17:34:57.557160"
     },
     {
       "title": "Sr. Program Manager, Brand Protections",
@@ -319,11 +219,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.978377",
+      "scraped_at": "2026-09-23T17:16:58.573974",
       "id": "43b540b82f5618f0",
-      "first_seen": "2026-09-23T05:21:13.905835",
+      "first_seen": "2026-09-23T17:34:57.540056",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905836"
+      "last_seen": "2026-09-23T17:34:57.540057"
     },
     {
       "title": "Technical Program Manager",
@@ -339,11 +239,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.978503",
+      "scraped_at": "2026-09-23T17:16:58.574220",
       "id": "c38b576f39f185cc",
-      "first_seen": "2026-09-23T05:21:13.905891",
+      "first_seen": "2026-09-23T17:34:57.540171",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905892"
+      "last_seen": "2026-09-23T17:34:57.540172"
     },
     {
       "title": "Engineering Program Manager",
@@ -359,31 +259,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.978691",
+      "scraped_at": "2026-09-23T17:16:58.574456",
       "id": "49b89904ce3605e9",
-      "first_seen": "2026-09-23T05:21:13.905946",
+      "first_seen": "2026-09-23T17:34:57.540269",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905947"
-    },
-    {
-      "title": "[Upcoming Roles] Transformational Technical Program Manager - WebOps - Shared",
-      "company": "Google Operations Center",
-      "location": "Greater Hyderabad Area",
-      "url": "https://in.linkedin.com/jobs/view/upcoming-roles-transformational-technical-program-manager-webops-shared-at-google-operations-center-4467846515",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-18",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 55.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979152",
-      "id": "03d269be9d3e829a",
-      "first_seen": "2026-09-23T05:21:13.906111",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906112"
+      "last_seen": "2026-09-23T17:34:57.540270"
     },
     {
       "title": "GenAI Planning Program Manager, AWS Supply Chain - IPS",
@@ -399,11 +279,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979408",
+      "scraped_at": "2026-09-23T17:16:58.575851",
       "id": "9476af5f314261b2",
-      "first_seen": "2026-09-23T05:21:13.906195",
+      "first_seen": "2026-09-23T17:34:57.540747",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906195"
+      "last_seen": "2026-09-23T17:34:57.540748"
     },
     {
       "title": "Staff Technical Program Manager — Multi-Entity Account Scale & Access Lifecycle",
@@ -419,11 +299,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979479",
+      "scraped_at": "2026-09-23T17:16:58.575963",
       "id": "581ccf44e6cd2a94",
-      "first_seen": "2026-09-23T05:21:13.906227",
+      "first_seen": "2026-09-23T17:34:57.540801",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906228"
+      "last_seen": "2026-09-23T17:34:57.540802"
     },
     {
       "title": "Sr Technical Program Manager, Amazon Leo Commerce",
@@ -439,11 +319,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.054416",
+      "scraped_at": "2026-09-23T17:17:07.766055",
       "id": "ae762eb4ffe582ae",
-      "first_seen": "2026-09-23T05:21:13.906674",
+      "first_seen": "2026-09-23T17:34:57.541410",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906675"
+      "last_seen": "2026-09-23T17:34:57.541411"
     },
     {
       "title": "Technical Program Manager, Network Capacity Planning",
@@ -459,11 +339,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.054709",
+      "scraped_at": "2026-09-23T17:17:07.766734",
       "id": "17e6eb6e8c7a42dd",
-      "first_seen": "2026-09-23T05:21:13.906733",
+      "first_seen": "2026-09-23T17:34:57.541504",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906733"
+      "last_seen": "2026-09-23T17:34:57.541505"
     },
     {
       "title": "Sr. Technical Program Manager, Amazon Device Troubleshooting Team",
@@ -479,11 +359,31 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:59.056633",
+      "scraped_at": "2026-09-23T17:17:16.765573",
       "id": "1dc6d5d3a253f075",
-      "first_seen": "2026-09-23T05:21:13.907357",
+      "first_seen": "2026-09-23T17:34:57.542715",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907357"
+      "last_seen": "2026-09-23T17:34:57.542716"
+    },
+    {
+      "title": "Sr. Technical Program Manager, Product & Offers Experience",
+      "company": "Amazon",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/sr-technical-program-manager-product-offers-experience-at-amazon-4460395386",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-19",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 55.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:16.767424",
+      "id": "161ff86662a77424",
+      "first_seen": "2026-09-23T17:34:57.542859",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.542860"
     },
     {
       "title": "Sr. Technical Program Manager",
@@ -499,11 +399,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:59.059618",
+      "scraped_at": "2026-09-23T17:17:16.770824",
       "id": "f86563443333b93e",
-      "first_seen": "2026-09-23T05:21:13.907887",
+      "first_seen": "2026-09-23T17:34:57.543516",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907888"
+      "last_seen": "2026-09-23T17:34:57.543517"
     },
     {
       "title": "Technical Program Manager, Software Engineering",
@@ -519,11 +419,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:59.059820",
+      "scraped_at": "2026-09-23T17:17:16.771044",
       "id": "8b19445839d4e478",
-      "first_seen": "2026-09-23T05:21:13.907941",
+      "first_seen": "2026-09-23T17:34:57.543606",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907942"
+      "last_seen": "2026-09-23T17:34:57.543607"
     },
     {
       "title": "Technical Program Manager, Cloud Storage",
@@ -539,11 +439,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:08.163793",
+      "scraped_at": "2026-09-23T17:17:25.860647",
       "id": "ef5e49e1193776b0",
-      "first_seen": "2026-09-23T05:21:13.908154",
+      "first_seen": "2026-09-23T17:34:57.544063",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.908155"
+      "last_seen": "2026-09-23T17:34:57.544064"
     },
     {
       "title": "HR Consultant (Delivery Lead N2 Japanese Bilingual)",
@@ -559,11 +459,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:26.259869",
+      "scraped_at": "2026-09-23T17:17:43.922470",
       "id": "9d1f265672f43167",
-      "first_seen": "2026-09-23T05:21:13.908850",
+      "first_seen": "2026-09-23T17:34:57.545370",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.908851"
+      "last_seen": "2026-09-23T17:34:57.545371"
     },
     {
       "title": "Senior Manager - Corporate Travel",
@@ -579,11 +479,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:26.261036",
+      "scraped_at": "2026-09-23T17:17:43.924739",
       "id": "8a28ad6099e27441",
-      "first_seen": "2026-09-23T05:21:13.909079",
+      "first_seen": "2026-09-23T17:34:57.545848",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.909080"
+      "last_seen": "2026-09-23T17:34:57.545849"
     },
     {
       "title": "Sr. Technical Program Manager, Business Data Technologies",
@@ -599,11 +499,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:35.328690",
+      "scraped_at": "2026-09-23T17:17:52.965059",
       "id": "1d4a598695053ae2",
-      "first_seen": "2026-09-23T05:21:13.909431",
+      "first_seen": "2026-09-23T17:34:57.546241",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.909432"
+      "last_seen": "2026-09-23T17:34:57.546242"
     },
     {
       "title": "Sr. Technical Program Manager, Strategic programs, PRISM, Last Mile Delivery Tech",
@@ -619,51 +519,31 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:03:53.452219",
+      "scraped_at": "2026-09-23T17:18:11.166516",
       "id": "1568cc7aea5b4b3a",
-      "first_seen": "2026-09-23T05:21:13.910403",
+      "first_seen": "2026-09-23T17:34:57.547536",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.910403"
+      "last_seen": "2026-09-23T17:34:57.547537"
     },
     {
-      "title": "Program Manager - Salesforce-CPQ",
-      "company": "Salesforce",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://in.linkedin.com/jobs/view/program-manager-salesforce-cpq-at-salesforce-4467975166",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-16",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 55.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:04:20.534770",
-      "id": "aefe38bed2c71266",
-      "first_seen": "2026-09-23T05:21:13.913273",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.913274"
-    },
-    {
-      "title": "Program Manager - Salesforce-CPQ",
-      "company": "Salesforce",
+      "title": "Program Manager II, Buyer Abuse",
+      "company": "Amazon",
       "location": "Hyderabad, Telangana, India",
-      "url": "https://in.linkedin.com/jobs/view/program-manager-salesforce-cpq-at-salesforce-4467961453",
+      "url": "https://in.linkedin.com/jobs/view/program-manager-ii-buyer-abuse-at-amazon-4462093623",
       "source": "linkedin",
       "description": "",
       "salary_text": "",
-      "posted_date": "2026-09-16",
+      "posted_date": "2026-09-23",
       "company_origin": "",
       "experience_level": "",
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:20.534900",
-      "id": "15eaaba3417ed550",
-      "first_seen": "2026-09-23T05:21:13.913300",
+      "scraped_at": "2026-09-23T17:18:48.161385",
+      "id": "d3396ed22050a599",
+      "first_seen": "2026-09-23T17:34:57.552670",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.913300"
+      "last_seen": "2026-09-23T17:34:57.552671"
     },
     {
       "title": "Technical Program Manager, AI Garage",
@@ -679,11 +559,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:30.114455",
+      "scraped_at": "2026-09-23T17:18:48.164273",
       "id": "79d0740acd295ac2",
-      "first_seen": "2026-09-23T05:21:13.913818",
+      "first_seen": "2026-09-23T17:34:57.553265",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.913819"
+      "last_seen": "2026-09-23T17:34:57.553266"
     },
     {
       "title": "Technical Program Manager, Fleet and Supply Chain Intelligence",
@@ -699,11 +579,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:04:30.115648",
+      "scraped_at": "2026-09-23T17:18:48.166437",
       "id": "c14604c72333f77b",
-      "first_seen": "2026-09-23T05:21:13.914044",
+      "first_seen": "2026-09-23T17:34:57.553791",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.914044"
+      "last_seen": "2026-09-23T17:34:57.553792"
     },
     {
       "title": "Program Manager",
@@ -719,11 +599,11 @@
       "is_expat_role": false,
       "match_score": 55.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:05:17.110035",
+      "scraped_at": "2026-09-23T17:18:57.616802",
       "id": "8010a1708e34fd0d",
-      "first_seen": "2026-09-23T05:21:13.915538",
+      "first_seen": "2026-09-23T17:34:57.554284",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.915539"
+      "last_seen": "2026-09-23T17:34:57.554285"
     },
     {
       "title": "Partner Advocacy & Lifecycle Program Manager",
@@ -739,11 +619,11 @@
       "is_expat_role": false,
       "match_score": 53.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.977598",
+      "scraped_at": "2026-09-23T17:16:58.572606",
       "id": "fe1a6a58807a0f04",
-      "first_seen": "2026-09-23T05:21:13.905579",
+      "first_seen": "2026-09-23T17:34:57.539699",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905580"
+      "last_seen": "2026-09-23T17:34:57.539700"
     },
     {
       "title": "Technical Program Manager (Optical Networks)",
@@ -759,11 +639,11 @@
       "is_expat_role": false,
       "match_score": 53.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:59.059308",
+      "scraped_at": "2026-09-23T17:17:16.770379",
       "id": "9d5a87820a724366",
-      "first_seen": "2026-09-23T05:21:13.907798",
+      "first_seen": "2026-09-23T17:34:57.543366",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.907799"
+      "last_seen": "2026-09-23T17:34:57.543367"
     },
     {
       "title": "Principal Technical Program Manager",
@@ -779,51 +659,11 @@
       "is_expat_role": false,
       "match_score": 50.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.053266",
+      "scraped_at": "2026-09-23T17:17:07.764237",
       "id": "a12c56eb6f34adec",
-      "first_seen": "2026-09-23T05:21:13.906498",
+      "first_seen": "2026-09-23T17:34:57.541166",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906498"
-    },
-    {
-      "title": "Principal Enterprise Delivery Manager",
-      "company": "Atlassian",
-      "location": "Greater Kolkata Area",
-      "url": "https://in.linkedin.com/jobs/view/principal-enterprise-delivery-manager-at-atlassian-4458784394",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-16",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 50.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:03:44.368933",
-      "id": "af7345376d4dc8dc",
-      "first_seen": "2026-09-23T05:21:13.910137",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.910137"
-    },
-    {
-      "title": "Principal Project/Program Manager",
-      "company": "Analog Devices",
-      "location": "Greater Bengaluru Area",
-      "url": "https://in.linkedin.com/jobs/view/principal-project-program-manager-at-analog-devices-4468942373",
-      "source": "linkedin",
-      "description": "",
-      "salary_text": "",
-      "posted_date": "2026-09-22",
-      "company_origin": "",
-      "experience_level": "",
-      "is_expat_role": false,
-      "match_score": 45.0,
-      "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.976398",
-      "id": "bc4a211a46b449c0",
-      "first_seen": "2026-09-23T05:21:13.905098",
-      "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905108"
+      "last_seen": "2026-09-23T17:34:57.541167"
     },
     {
       "title": "Principal Program Manager",
@@ -839,11 +679,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.976504",
+      "scraped_at": "2026-09-23T17:16:58.570281",
       "id": "f81b516d72db7074",
-      "first_seen": "2026-09-23T05:21:13.905162",
+      "first_seen": "2026-09-23T17:34:57.538932",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905163"
+      "last_seen": "2026-09-23T17:34:57.538933"
     },
     {
       "title": "Senior Program Manager",
@@ -859,11 +699,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.976869",
+      "scraped_at": "2026-09-23T17:16:58.570904",
       "id": "e33ffe32d273484c",
-      "first_seen": "2026-09-23T05:21:13.905322",
+      "first_seen": "2026-09-23T17:34:57.539220",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905322"
+      "last_seen": "2026-09-23T17:34:57.539221"
     },
     {
       "title": "Senior Program Manager – Enterprise ERP / CRM / SAP",
@@ -879,11 +719,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.977010",
+      "scraped_at": "2026-09-23T17:16:58.571165",
       "id": "b316ed6e14189042",
-      "first_seen": "2026-09-23T05:21:13.905396",
+      "first_seen": "2026-09-23T17:34:57.539343",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905397"
+      "last_seen": "2026-09-23T17:34:57.539344"
     },
     {
       "title": "SoC Program Manager, Director",
@@ -899,11 +739,31 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.977144",
+      "scraped_at": "2026-09-23T17:16:58.571409",
       "id": "3ceb3ba742414d90",
-      "first_seen": "2026-09-23T05:21:13.905429",
+      "first_seen": "2026-09-23T17:34:57.539396",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.905430"
+      "last_seen": "2026-09-23T17:34:57.539397"
+    },
+    {
+      "title": "Sr Principal Program Manager",
+      "company": "Cadence",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/sr-principal-program-manager-at-cadence-4469428839",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-23",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:16:58.571761",
+      "id": "36a84f1a328a2f67",
+      "first_seen": "2026-09-23T17:34:57.539497",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.539498"
     },
     {
       "title": "Senior Specialist Program Manager, Actimize",
@@ -919,11 +779,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.978891",
+      "scraped_at": "2026-09-23T17:16:58.574794",
       "id": "43a4ee40aaa0716f",
-      "first_seen": "2026-09-23T05:21:13.906026",
+      "first_seen": "2026-09-23T17:34:57.540408",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906026"
+      "last_seen": "2026-09-23T17:34:57.540409"
     },
     {
       "title": "Senior Engineering Program Manager - Reliability Solutions",
@@ -939,11 +799,31 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979086",
+      "scraped_at": "2026-09-23T17:16:58.575027",
       "id": "0529e30ed6aabb60",
-      "first_seen": "2026-09-23T05:21:13.906083",
+      "first_seen": "2026-09-23T17:34:57.540505",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906083"
+      "last_seen": "2026-09-23T17:34:57.540506"
+    },
+    {
+      "title": "Technical Program Manager / Program Lead",
+      "company": "Tachyon Technologies",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/technical-program-manager-program-lead-at-tachyon-technologies-4468642854",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-17",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:16:58.575161",
+      "id": "6c603eae60d845cb",
+      "first_seen": "2026-09-23T17:34:57.540554",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.540555"
     },
     {
       "title": "Director - Program Manager [T500-29439]",
@@ -959,11 +839,31 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979340",
+      "scraped_at": "2026-09-23T17:16:58.575515",
       "id": "a1881b2532f71957",
-      "first_seen": "2026-09-23T05:21:13.906167",
+      "first_seen": "2026-09-23T17:34:57.540650",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906167"
+      "last_seen": "2026-09-23T17:34:57.540651"
+    },
+    {
+      "title": "Program Management Lead - WebOps - Shared (Transformational TPM)",
+      "company": "Google Operations Center",
+      "location": "Greater Hyderabad Area",
+      "url": "https://in.linkedin.com/jobs/view/program-management-lead-webops-shared-transformational-tpm-at-google-operations-center-4467846515",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-18",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:16:58.576807",
+      "id": "e212a7dd8e92d5e9",
+      "first_seen": "2026-09-23T17:34:57.541002",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.541003"
     },
     {
       "title": "Principal, Program Manager",
@@ -979,11 +879,11 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:40.979881",
+      "scraped_at": "2026-09-23T17:16:58.577035",
       "id": "b83203242122d9ae",
-      "first_seen": "2026-09-23T05:21:13.906343",
+      "first_seen": "2026-09-23T17:34:57.541100",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906344"
+      "last_seen": "2026-09-23T17:34:57.541101"
     },
     {
       "title": "Lead Program Manager",
@@ -999,11 +899,111 @@
       "is_expat_role": false,
       "match_score": 45.0,
       "tags": [],
-      "scraped_at": "2026-09-23T05:02:50.053712",
+      "scraped_at": "2026-09-23T17:17:07.764690",
       "id": "7abbff2aa86cb216",
-      "first_seen": "2026-09-23T05:21:13.906550",
+      "first_seen": "2026-09-23T17:34:57.541216",
       "seen_count": 1,
-      "last_seen": "2026-09-23T05:21:13.906551"
+      "last_seen": "2026-09-23T17:34:57.541216"
+    },
+    {
+      "title": "Senior Program Manager - Technical Apps",
+      "company": "Qualcomm",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-program-manager-technical-apps-at-qualcomm-4457963390",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-17",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:07.766185",
+      "id": "455061f4f5459f76",
+      "first_seen": "2026-09-23T17:34:57.541458",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.541459"
+    },
+    {
+      "title": "Senior Technical Project Manager",
+      "company": "InCommon",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/senior-technical-project-manager-at-incommon-4469322056",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-23",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:07.768153",
+      "id": "b96f35dab976a03e",
+      "first_seen": "2026-09-23T17:34:57.541910",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.541911"
+    },
+    {
+      "title": "Senior Technical Program Manager II",
+      "company": "Nielsen",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-technical-program-manager-ii-at-nielsen-4466684048",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-18",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:07.768376",
+      "id": "91b46ae190a2d4f0",
+      "first_seen": "2026-09-23T17:34:57.541956",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.541957"
+    },
+    {
+      "title": "Senior IT Infrastructure Program Manager",
+      "company": "Ralliant",
+      "location": "Bengaluru East, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-it-infrastructure-program-manager-at-ralliant-4449996211",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-18",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:07.770022",
+      "id": "6708f2c9a1b708a2",
+      "first_seen": "2026-09-23T17:34:57.542468",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.542469"
+    },
+    {
+      "title": "Senior Information Technology Program Manager",
+      "company": "Runmap Infotech Private Ltd.",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-information-technology-program-manager-at-runmap-infotech-private-ltd-4470927061",
+      "source": "linkedin",
+      "description": "",
+      "salary_text": "",
+      "posted_date": "2026-09-23",
+      "company_origin": "",
+      "experience_level": "",
+      "is_expat_role": false,
+      "match_score": 45.0,
+      "tags": [],
+      "scraped_at": "2026-09-23T17:17:07.770723",
+      "id": "3a2e1f1c42b27ba2",
+      "first_seen": "2026-09-23T17:34:57.542610",
+      "seen_count": 1,
+      "last_seen": "2026-09-23T17:34:57.542611"
     }
   ]
 }
